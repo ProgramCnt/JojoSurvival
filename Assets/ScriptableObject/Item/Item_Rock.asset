@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4dd36247081ec694b91946f2924dd07a, type: 3}
-  m_Name: Item_Wood
+  m_Name: Item_Rock
   m_EditorClassIdentifier: 
-  itemName: "\uB098\uBB34"
-  description: "\uB098\uBB34 \uC785\uB2C8\uB2E4."
+  itemName: "\uB3CC"
+  description: "\uB3CC \uC785\uB2C8\uB2E4."
   icon: {fileID: 0}
-  dropPrefab: {fileID: 4187889482545473333, guid: 21e888192c27845499f68409b69d0bbd, type: 3}
+  dropPrefab: {fileID: 6868617672767962737, guid: 541513ca9a87b6948981f7399924fb68, type: 3}
   type: 3
   canStack: 1
   maxStackAmount: 10
