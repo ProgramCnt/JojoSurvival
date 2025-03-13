@@ -10,19 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4dd36247081ec694b91946f2924dd07a, type: 3}
-  m_Name: Item_Meet
+  m_Name: Item_Pickaxe
   m_EditorClassIdentifier: 
-  itemName: "\uACE0\uAE30"
-  description: "\uBA39\uC73C\uBA74 \uCCB4\uB825\uC744 \uD68C\uBCF5\uD569\uB2C8\uB2E4."
+  itemName: "\uACE1\uAD2D\uC774"
+  description: "\uB3CC\uC744 \uCE90\uB294 \uB3C4\uAD6C\uC785\uB2C8\uB2E4."
   icon: {fileID: 0}
-  dropPrefab: {fileID: 8709033683697201764, guid: 26264caa24671244badc2358e5303561, type: 3}
-  type: 1
-  canStack: 1
-  maxStackAmount: 10
+  dropPrefab: {fileID: 8110256000040158875, guid: 1454bbb6bd8357941898a1b5a84eabb3, type: 3}
+  type: 0
+  canStack: 0
+  maxStackAmount: 0
   equipmentData:
-    equipPrefab: {fileID: 0}
-  consumableData:
-  - type: 0
-    value: 10
-  - type: 1
-    value: 10
+    equipPrefab: {fileID: 5339994856639424604, guid: 5b3e201af7fb1704aa1ad47a4db92f19, type: 3}
+  consumableData: []
