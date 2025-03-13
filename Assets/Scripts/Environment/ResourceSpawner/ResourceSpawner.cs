@@ -51,6 +51,8 @@ public class ResourceSpawner : MonoBehaviour
                     continue;
                 }
 
+                //일정 높이에는 생성 안되게끔 처리해야될수도 있음
+
                 if (IsPositionValid(spawnPosition, resourceType.minSpacing))
                 {
                     // 나무 종류를 랜덤 선택
