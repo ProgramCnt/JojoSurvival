@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 13820784}
   - component: {fileID: 13820783}
   - component: {fileID: 13820782}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_01 (38)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,6 +229,35 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 13820780}
   m_Mesh: {fileID: 4300000, guid: 264414c28ea0fbb41b924fd17d9228b3, type: 3}
+--- !u!1 &16570289 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 522696358315740366, guid: 61d7afe7a7968ec4f85dc7e730f339ba, type: 3}
+  m_PrefabInstance: {fileID: 560596536}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &16570290 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6696086066435996003, guid: 61d7afe7a7968ec4f85dc7e730f339ba, type: 3}
+  m_PrefabInstance: {fileID: 560596536}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &16570291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16570289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951dd57db23dfa642bc9f5c458ad73e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 0}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 512
+  isInstalled: 0
+  originalMaterial: {fileID: 2100000, guid: 922ae5184f12f4d4fa9391df426feed9, type: 2}
+  changeMaterial: {fileID: 2100000, guid: cd18a0c9373f87242beb64d23a88e5ee, type: 2}
 --- !u!1 &22703944
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,7 +270,7 @@ GameObject:
   - component: {fileID: 22703948}
   - component: {fileID: 22703947}
   - component: {fileID: 22703946}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_01 (35)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -347,7 +376,7 @@ GameObject:
   - component: {fileID: 35323557}
   - component: {fileID: 35323556}
   - component: {fileID: 35323555}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_01 (39)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -453,7 +482,7 @@ GameObject:
   - component: {fileID: 64479342}
   - component: {fileID: 64479341}
   - component: {fileID: 64479340}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_hill_small_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -559,7 +588,7 @@ GameObject:
   - component: {fileID: 72022108}
   - component: {fileID: 72022107}
   - component: {fileID: 72022106}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_01 (42)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -665,7 +694,7 @@ GameObject:
   - component: {fileID: 76773939}
   - component: {fileID: 76773938}
   - component: {fileID: 76773937}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_01 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -771,7 +800,7 @@ GameObject:
   - component: {fileID: 106054273}
   - component: {fileID: 106054272}
   - component: {fileID: 106054271}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -877,7 +906,7 @@ GameObject:
   - component: {fileID: 132328718}
   - component: {fileID: 132328717}
   - component: {fileID: 132328716}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_mountain_01 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -971,6 +1000,108 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 132328714}
   m_Mesh: {fileID: 4300000, guid: 9d123ff5b15c0bd4fbd33779e2acdbd9, type: 3}
+--- !u!1 &153500093
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 153500097}
+  - component: {fileID: 153500096}
+  - component: {fileID: 153500095}
+  - component: {fileID: 153500094}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &153500094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153500093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &153500095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153500093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &153500096
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153500093}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &153500097
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153500093}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 943527707}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &156287720
 GameObject:
   m_ObjectHideFlags: 0
@@ -983,7 +1114,7 @@ GameObject:
   - component: {fileID: 156287724}
   - component: {fileID: 156287723}
   - component: {fileID: 156287722}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_hill_small_02 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1089,7 +1220,7 @@ GameObject:
   - component: {fileID: 190356350}
   - component: {fileID: 190356349}
   - component: {fileID: 190356348}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_01 (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1195,7 +1326,7 @@ GameObject:
   - component: {fileID: 205041434}
   - component: {fileID: 205041433}
   - component: {fileID: 205041432}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_01 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1301,7 +1432,7 @@ GameObject:
   - component: {fileID: 286925394}
   - component: {fileID: 286925393}
   - component: {fileID: 286925392}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_01 (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1395,6 +1526,261 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 286925390}
   m_Mesh: {fileID: 4300000, guid: 264414c28ea0fbb41b924fd17d9228b3, type: 3}
+--- !u!1001 &372171364
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 49467141444586268, guid: 33fe42f49117d4c459d1c89e92dff2d5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 49467141444586268, guid: 33fe42f49117d4c459d1c89e92dff2d5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -8
+      objectReference: {fileID: 0}
+    - target: {fileID: 49467141444586268, guid: 33fe42f49117d4c459d1c89e92dff2d5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 41.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 49467141444586268, guid: 33fe42f49117d4c459d1c89e92dff2d5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 49467141444586268, guid: 33fe42f49117d4c459d1c89e92dff2d5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 49467141444586268, guid: 33fe42f49117d4c459d1c89e92dff2d5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 49467141444586268, guid: 33fe42f49117d4c459d1c89e92dff2d5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 49467141444586268, guid: 33fe42f49117d4c459d1c89e92dff2d5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 49467141444586268, guid: 33fe42f49117d4c459d1c89e92dff2d5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 49467141444586268, guid: 33fe42f49117d4c459d1c89e92dff2d5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3161529296482004627, guid: 33fe42f49117d4c459d1c89e92dff2d5, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194864431115146037, guid: 33fe42f49117d4c459d1c89e92dff2d5, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4311808048812359465, guid: 33fe42f49117d4c459d1c89e92dff2d5, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5297832235437880702, guid: 33fe42f49117d4c459d1c89e92dff2d5, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5703122329472062467, guid: 33fe42f49117d4c459d1c89e92dff2d5, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5789147024560196790, guid: 33fe42f49117d4c459d1c89e92dff2d5, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7421244798676157692, guid: 33fe42f49117d4c459d1c89e92dff2d5, type: 3}
+      propertyPath: m_Name
+      value: HouseTool_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7421244798676157692, guid: 33fe42f49117d4c459d1c89e92dff2d5, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7771624036608838209, guid: 33fe42f49117d4c459d1c89e92dff2d5, type: 3}
+      propertyPath: isInstalled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9074757302129575328, guid: 33fe42f49117d4c459d1c89e92dff2d5, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5789147024560196790, guid: 33fe42f49117d4c459d1c89e92dff2d5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1954606750}
+  m_SourcePrefab: {fileID: 100100000, guid: 33fe42f49117d4c459d1c89e92dff2d5, type: 3}
+--- !u!1 &388932348
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 388932349}
+  - component: {fileID: 388932351}
+  m_Layer: 0
+  m_Name: EquipCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &388932349
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388932348}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 16570290}
+  m_Father: {fileID: 1340076631}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &388932351
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388932348}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 3
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 128
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!1 &400801515
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 400801516}
+  - component: {fileID: 400801518}
+  - component: {fileID: 400801517}
+  m_Layer: 5
+  m_Name: Icon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &400801516
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400801515}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1376230627}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -140, y: 0}
+  m_SizeDelta: {x: 55, y: 55}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &400801517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400801515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &400801518
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400801515}
+  m_CullTransparentMesh: 1
 --- !u!1 &437145093
 GameObject:
   m_ObjectHideFlags: 0
@@ -1407,7 +1793,7 @@ GameObject:
   - component: {fileID: 437145097}
   - component: {fileID: 437145096}
   - component: {fileID: 437145095}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_01 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1513,7 +1899,7 @@ GameObject:
   - component: {fileID: 464953527}
   - component: {fileID: 464953526}
   - component: {fileID: 464953525}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_hill_small_01 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1619,7 +2005,7 @@ GameObject:
   - component: {fileID: 501042954}
   - component: {fileID: 501042953}
   - component: {fileID: 501042952}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_01 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1713,6 +2099,74 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 501042950}
   m_Mesh: {fileID: 4300000, guid: 264414c28ea0fbb41b924fd17d9228b3, type: 3}
+--- !u!1001 &560596536
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 388932349}
+    m_Modifications:
+    - target: {fileID: 522696358315740366, guid: 61d7afe7a7968ec4f85dc7e730f339ba, type: 3}
+      propertyPath: m_Name
+      value: Floor_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1574869523090287493, guid: 61d7afe7a7968ec4f85dc7e730f339ba, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6696086066435996003, guid: 61d7afe7a7968ec4f85dc7e730f339ba, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6696086066435996003, guid: 61d7afe7a7968ec4f85dc7e730f339ba, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6696086066435996003, guid: 61d7afe7a7968ec4f85dc7e730f339ba, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6696086066435996003, guid: 61d7afe7a7968ec4f85dc7e730f339ba, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6696086066435996003, guid: 61d7afe7a7968ec4f85dc7e730f339ba, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6696086066435996003, guid: 61d7afe7a7968ec4f85dc7e730f339ba, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6696086066435996003, guid: 61d7afe7a7968ec4f85dc7e730f339ba, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6696086066435996003, guid: 61d7afe7a7968ec4f85dc7e730f339ba, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6696086066435996003, guid: 61d7afe7a7968ec4f85dc7e730f339ba, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6696086066435996003, guid: 61d7afe7a7968ec4f85dc7e730f339ba, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8291582233790445544, guid: 61d7afe7a7968ec4f85dc7e730f339ba, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 522696358315740366, guid: 61d7afe7a7968ec4f85dc7e730f339ba, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 16570291}
+  m_SourcePrefab: {fileID: 100100000, guid: 61d7afe7a7968ec4f85dc7e730f339ba, type: 3}
 --- !u!1 &574346974
 GameObject:
   m_ObjectHideFlags: 0
@@ -1725,7 +2179,7 @@ GameObject:
   - component: {fileID: 574346978}
   - component: {fileID: 574346977}
   - component: {fileID: 574346976}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_02 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1831,7 +2285,7 @@ GameObject:
   - component: {fileID: 581945193}
   - component: {fileID: 581945192}
   - component: {fileID: 581945191}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_01 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1937,7 +2391,7 @@ GameObject:
   - component: {fileID: 602288452}
   - component: {fileID: 602288451}
   - component: {fileID: 602288450}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_01 (34)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2043,7 +2497,7 @@ GameObject:
   - component: {fileID: 608758376}
   - component: {fileID: 608758375}
   - component: {fileID: 608758374}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_01 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2149,7 +2603,7 @@ GameObject:
   - component: {fileID: 617046680}
   - component: {fileID: 617046679}
   - component: {fileID: 617046678}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_hill_small_01 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2255,7 +2709,7 @@ GameObject:
   - component: {fileID: 649007713}
   - component: {fileID: 649007712}
   - component: {fileID: 649007711}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_mountain_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2361,7 +2815,7 @@ GameObject:
   - component: {fileID: 700659535}
   - component: {fileID: 700659534}
   - component: {fileID: 700659533}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_02 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2467,7 +2921,7 @@ GameObject:
   - component: {fileID: 723620322}
   - component: {fileID: 723620321}
   - component: {fileID: 723620320}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_01 (37)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2573,7 +3027,7 @@ GameObject:
   - component: {fileID: 737129924}
   - component: {fileID: 737129923}
   - component: {fileID: 737129922}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_01 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2679,7 +3133,7 @@ GameObject:
   - component: {fileID: 739377797}
   - component: {fileID: 739377796}
   - component: {fileID: 739377795}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_01 (41)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2785,7 +3239,7 @@ GameObject:
   - component: {fileID: 740071514}
   - component: {fileID: 740071513}
   - component: {fileID: 740071512}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_01 (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2891,7 +3345,7 @@ GameObject:
   - component: {fileID: 764257040}
   - component: {fileID: 764257039}
   - component: {fileID: 764257038}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_01 (36)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2997,7 +3451,7 @@ GameObject:
   - component: {fileID: 776961330}
   - component: {fileID: 776961329}
   - component: {fileID: 776961328}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_mountain_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3103,7 +3557,7 @@ GameObject:
   - component: {fileID: 781402244}
   - component: {fileID: 781402243}
   - component: {fileID: 781402242}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_01 (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3209,7 +3663,7 @@ GameObject:
   - component: {fileID: 822307420}
   - component: {fileID: 822307419}
   - component: {fileID: 822307418}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_mountain_01 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3315,7 +3769,7 @@ GameObject:
   - component: {fileID: 846921059}
   - component: {fileID: 846921058}
   - component: {fileID: 846921057}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_hill_small_02 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3421,7 +3875,7 @@ GameObject:
   - component: {fileID: 878411712}
   - component: {fileID: 878411711}
   - component: {fileID: 878411710}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_01 (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3527,7 +3981,7 @@ GameObject:
   - component: {fileID: 880366319}
   - component: {fileID: 880366318}
   - component: {fileID: 880366317}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_01 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3621,6 +4075,81 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 880366315}
   m_Mesh: {fileID: 4300000, guid: 264414c28ea0fbb41b924fd17d9228b3, type: 3}
+--- !u!1 &883831268
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 883831269}
+  - component: {fileID: 883831271}
+  - component: {fileID: 883831270}
+  m_Layer: 5
+  m_Name: Icon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &883831269
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883831268}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 916167018}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -140, y: 0}
+  m_SizeDelta: {x: 55, y: 55}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &883831270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883831268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &883831271
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883831268}
+  m_CullTransparentMesh: 1
 --- !u!1 &892907980
 GameObject:
   m_ObjectHideFlags: 0
@@ -3633,7 +4162,7 @@ GameObject:
   - component: {fileID: 892907984}
   - component: {fileID: 892907983}
   - component: {fileID: 892907982}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_hill_small_02 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3739,7 +4268,7 @@ GameObject:
   - component: {fileID: 906468596}
   - component: {fileID: 906468595}
   - component: {fileID: 906468594}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_01 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3845,7 +4374,7 @@ GameObject:
   - component: {fileID: 909719846}
   - component: {fileID: 909719845}
   - component: {fileID: 909719844}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_hill_small_02 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3951,7 +4480,7 @@ GameObject:
   - component: {fileID: 915230983}
   - component: {fileID: 915230982}
   - component: {fileID: 915230981}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_01 (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4057,7 +4586,7 @@ GameObject:
   - component: {fileID: 916149399}
   - component: {fileID: 916149398}
   - component: {fileID: 916149397}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4151,6 +4680,197 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 916149395}
   m_Mesh: {fileID: 4300000, guid: 264414c28ea0fbb41b924fd17d9228b3, type: 3}
+--- !u!1 &916167017
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 916167018}
+  - component: {fileID: 916167021}
+  - component: {fileID: 916167020}
+  - component: {fileID: 916167019}
+  m_Layer: 5
+  m_Name: Hunger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &916167018
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916167017}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 883831269}
+  - {fileID: 1635234145}
+  m_Father: {fileID: 943527707}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 350, y: 65}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &916167019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916167017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c19d7aeeed9439383e932c599664a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curValue: 0
+  maxValue: 500
+  startValue: 400
+  passiveValue: 20
+  uiBar: {fileID: 1635234146}
+--- !u!114 &916167020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916167017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &916167021
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916167017}
+  m_CullTransparentMesh: 1
+--- !u!1 &943527706
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 943527707}
+  - component: {fileID: 943527710}
+  - component: {fileID: 943527709}
+  - component: {fileID: 943527708}
+  m_Layer: 5
+  m_Name: Conditions
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &943527707
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943527706}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1376230627}
+  - {fileID: 916167018}
+  - {fileID: 1495568425}
+  m_Father: {fileID: 153500097}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -15, y: 15}
+  m_SizeDelta: {x: 350, y: 210}
+  m_Pivot: {x: 1, y: 0}
+--- !u!114 &943527708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943527706}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21bb802c13d474511966f3af4308c072, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiCondition: {fileID: 0}
+  noHungerHealthDecay: 2
+--- !u!114 &943527709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943527706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 237a1b6abf32642cfa0c7bbc09d2a9a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 1376230628}
+  hunger: {fileID: 916167019}
+  stamina: {fileID: 1495568426}
+--- !u!114 &943527710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943527706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_Spacing: 10
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1 &982229758
 GameObject:
   m_ObjectHideFlags: 0
@@ -4163,7 +4883,7 @@ GameObject:
   - component: {fileID: 982229762}
   - component: {fileID: 982229761}
   - component: {fileID: 982229760}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_01 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4269,7 +4989,7 @@ GameObject:
   - component: {fileID: 983714382}
   - component: {fileID: 983714381}
   - component: {fileID: 983714380}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_hill_small_01 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4363,6 +5083,81 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 983714378}
   m_Mesh: {fileID: 4300000, guid: 3602432658d7f1540978cbbd6875ad2d, type: 3}
+--- !u!1 &999149610
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 999149611}
+  - component: {fileID: 999149613}
+  - component: {fileID: 999149612}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &999149611
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999149610}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1495568425}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 30, y: 0}
+  m_SizeDelta: {x: 265, y: 40}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &999149612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999149610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.17702031, g: 0.45750505, b: 0.9622642, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 7482667652216324306, guid: 17718c368abad4570a0cc15cdc90db80, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 0
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &999149613
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999149610}
+  m_CullTransparentMesh: 1
 --- !u!1 &1028119382
 GameObject:
   m_ObjectHideFlags: 0
@@ -4375,7 +5170,7 @@ GameObject:
   - component: {fileID: 1028119386}
   - component: {fileID: 1028119385}
   - component: {fileID: 1028119384}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_hill_small_01 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4481,7 +5276,7 @@ GameObject:
   - component: {fileID: 1100293947}
   - component: {fileID: 1100293946}
   - component: {fileID: 1100293945}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_01 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4587,7 +5382,7 @@ GameObject:
   - component: {fileID: 1112514603}
   - component: {fileID: 1112514602}
   - component: {fileID: 1112514601}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_01 (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4693,7 +5488,7 @@ GameObject:
   - component: {fileID: 1135316513}
   - component: {fileID: 1135316512}
   - component: {fileID: 1135316511}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_01 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4799,7 +5594,7 @@ GameObject:
   - component: {fileID: 1140298798}
   - component: {fileID: 1140298797}
   - component: {fileID: 1140298796}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_01 (32)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4905,7 +5700,7 @@ GameObject:
   - component: {fileID: 1171529120}
   - component: {fileID: 1171529119}
   - component: {fileID: 1171529118}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_01 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5011,7 +5806,7 @@ GameObject:
   - component: {fileID: 1209495831}
   - component: {fileID: 1209495830}
   - component: {fileID: 1209495829}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_01 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5105,6 +5900,81 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1209495827}
   m_Mesh: {fileID: 4300000, guid: 264414c28ea0fbb41b924fd17d9228b3, type: 3}
+--- !u!1 &1271134786
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1271134787}
+  - component: {fileID: 1271134789}
+  - component: {fileID: 1271134788}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1271134787
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271134786}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1376230627}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 30, y: 0}
+  m_SizeDelta: {x: 265, y: 40}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1271134788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271134786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.7169812, g: 0.050729793, b: 0.050729793, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 7482667652216324306, guid: 17718c368abad4570a0cc15cdc90db80, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 0
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1271134789
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271134786}
+  m_CullTransparentMesh: 1
 --- !u!1 &1296267180
 GameObject:
   m_ObjectHideFlags: 0
@@ -5117,7 +5987,7 @@ GameObject:
   - component: {fileID: 1296267184}
   - component: {fileID: 1296267183}
   - component: {fileID: 1296267182}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_01 (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5223,7 +6093,7 @@ GameObject:
   - component: {fileID: 1309452950}
   - component: {fileID: 1309452949}
   - component: {fileID: 1309452948}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_hill_small_02 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5317,6 +6187,247 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1309452946}
   m_Mesh: {fileID: 4300000, guid: 87dc0b67e5fe70f40a31e17b0c0058b4, type: 3}
+--- !u!1 &1340076628
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1340076631}
+  - component: {fileID: 1340076630}
+  - component: {fileID: 1340076629}
+  - component: {fileID: 1340076633}
+  - component: {fileID: 1340076632}
+  - component: {fileID: 1340076634}
+  - component: {fileID: 1340076635}
+  m_Layer: 0
+  m_Name: Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1340076629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1340076628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8824097ae4f9048b998dbe6fc6f2182c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  jumpPower: 5
+  groundLayerMask:
+    serializedVersion: 2
+    m_Bits: 256
+  cameraContainer: {fileID: 1568439242}
+  minXLook: -65
+  maxXLook: 65
+  lookSensitivity: 0.1
+  canLook: 1
+--- !u!114 &1340076630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1340076628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee39bb56ae1274a7bbcdfaa09048443b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1340076629}
+  condition: {fileID: 0}
+--- !u!4 &1340076631
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1340076628}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.48989928, z: -0, w: 0.8717791}
+  m_LocalPosition: {x: 0.23285529, y: -8.326614, z: 26.63}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1568439242}
+  - {fileID: 388932349}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 58.668, z: 0}
+--- !u!136 &1340076632
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1340076628}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.25
+  m_Height: 1.7
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.85, z: 0}
+--- !u!54 &1340076633
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1340076628}
+  serializedVersion: 4
+  m_Mass: 20
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
+--- !u!114 &1340076634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1340076628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: d67642f99769748db8cd2c94d2346790, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1340076629}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnMoveInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 30594d5f-5930-4fc5-a4bb-822ca7f79de4
+    m_ActionName: Player/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1340076629}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnLookInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 45de2546-e7ce-4aee-a6e2-c26520b8387f
+    m_ActionName: Player/Look[/Mouse/delta]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1340076629}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnJumpInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 8c60428a-b247-4d93-8e15-6c0d471f1ab3
+    m_ActionName: Player/Jump[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3a88e57e-15f9-4e2e-a094-2d2c6e40ffae
+    m_ActionName: Player/Inventory[/Keyboard/tab]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 004ebb50-8d0a-49de-be12-e4aaaf997256
+    m_ActionName: Player/Interaction[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1340076629}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnClickMouseLeft
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 77e376e4-7aa2-48a1-947b-592d01692659
+    m_ActionName: Player/Attack[/Mouse/leftButton]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!114 &1340076635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1340076628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21bb802c13d474511966f3af4308c072, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiCondition: {fileID: 0}
+  noHungerHealthDecay: 0
 --- !u!1 &1364631168
 GameObject:
   m_ObjectHideFlags: 0
@@ -5403,12 +6514,107 @@ Transform:
   m_GameObject: {fileID: 1364631168}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 1.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1568439242}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1376230626
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1376230627}
+  - component: {fileID: 1376230630}
+  - component: {fileID: 1376230629}
+  - component: {fileID: 1376230628}
+  m_Layer: 5
+  m_Name: Health
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1376230627
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376230626}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 400801516}
+  - {fileID: 1271134787}
+  m_Father: {fileID: 943527707}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 350, y: 65}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1376230628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376230626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c19d7aeeed9439383e932c599664a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curValue: 0
+  maxValue: 100
+  startValue: 100
+  passiveValue: 1
+  uiBar: {fileID: 1271134788}
+--- !u!114 &1376230629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376230626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1376230630
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376230626}
+  m_CullTransparentMesh: 1
 --- !u!1 &1386642902
 GameObject:
   m_ObjectHideFlags: 0
@@ -5421,7 +6627,7 @@ GameObject:
   - component: {fileID: 1386642906}
   - component: {fileID: 1386642905}
   - component: {fileID: 1386642904}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_01 (40)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5527,7 +6733,7 @@ GameObject:
   - component: {fileID: 1395990335}
   - component: {fileID: 1395990334}
   - component: {fileID: 1395990333}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_01 (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5633,7 +6839,7 @@ GameObject:
   - component: {fileID: 1412023364}
   - component: {fileID: 1412023363}
   - component: {fileID: 1412023362}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_01 (33)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5727,6 +6933,101 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1412023360}
   m_Mesh: {fileID: 4300000, guid: 264414c28ea0fbb41b924fd17d9228b3, type: 3}
+--- !u!1 &1495568424
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1495568425}
+  - component: {fileID: 1495568428}
+  - component: {fileID: 1495568427}
+  - component: {fileID: 1495568426}
+  m_Layer: 5
+  m_Name: Thirst
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1495568425
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495568424}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1513816466}
+  - {fileID: 999149611}
+  m_Father: {fileID: 943527707}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 350, y: 65}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1495568426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495568424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c19d7aeeed9439383e932c599664a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curValue: 0
+  maxValue: 100
+  startValue: 100
+  passiveValue: 5
+  uiBar: {fileID: 999149612}
+--- !u!114 &1495568427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495568424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1495568428
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495568424}
+  m_CullTransparentMesh: 1
 --- !u!1 &1502397971
 GameObject:
   m_ObjectHideFlags: 0
@@ -5739,7 +7040,7 @@ GameObject:
   - component: {fileID: 1502397975}
   - component: {fileID: 1502397974}
   - component: {fileID: 1502397973}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_01 (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5845,7 +7146,7 @@ GameObject:
   - component: {fileID: 1510561039}
   - component: {fileID: 1510561038}
   - component: {fileID: 1510561037}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_01 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5939,6 +7240,81 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1510561035}
   m_Mesh: {fileID: 4300000, guid: 264414c28ea0fbb41b924fd17d9228b3, type: 3}
+--- !u!1 &1513816465
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1513816466}
+  - component: {fileID: 1513816468}
+  - component: {fileID: 1513816467}
+  m_Layer: 5
+  m_Name: Icon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1513816466
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513816465}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1495568425}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -140, y: 0}
+  m_SizeDelta: {x: 55, y: 55}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1513816467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513816465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1513816468
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513816465}
+  m_CullTransparentMesh: 1
 --- !u!1 &1549033502
 GameObject:
   m_ObjectHideFlags: 0
@@ -5951,7 +7327,7 @@ GameObject:
   - component: {fileID: 1549033506}
   - component: {fileID: 1549033505}
   - component: {fileID: 1549033504}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_hill_small_02 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6045,6 +7421,38 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1549033502}
   m_Mesh: {fileID: 4300000, guid: 87dc0b67e5fe70f40a31e17b0c0058b4, type: 3}
+--- !u!1 &1568439241
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1568439242}
+  m_Layer: 0
+  m_Name: CameraContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1568439242
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568439241}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1364631171}
+  m_Father: {fileID: 1340076631}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1572091831
 GameObject:
   m_ObjectHideFlags: 0
@@ -6057,7 +7465,7 @@ GameObject:
   - component: {fileID: 1572091835}
   - component: {fileID: 1572091834}
   - component: {fileID: 1572091833}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_hill_small_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6163,7 +7571,7 @@ GameObject:
   - component: {fileID: 1579751507}
   - component: {fileID: 1579751506}
   - component: {fileID: 1579751505}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_hill_small_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6257,6 +7665,81 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1579751503}
   m_Mesh: {fileID: 4300000, guid: 3602432658d7f1540978cbbd6875ad2d, type: 3}
+--- !u!1 &1635234144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1635234145}
+  - component: {fileID: 1635234147}
+  - component: {fileID: 1635234146}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1635234145
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635234144}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 916167018}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 30, y: 0}
+  m_SizeDelta: {x: 265, y: 40}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1635234146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635234144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.1492524, g: 0.735849, b: 0.270188, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 7482667652216324306, guid: 17718c368abad4570a0cc15cdc90db80, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 0
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1635234147
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635234144}
+  m_CullTransparentMesh: 1
 --- !u!1 &1686061803
 GameObject:
   m_ObjectHideFlags: 0
@@ -6269,7 +7752,7 @@ GameObject:
   - component: {fileID: 1686061807}
   - component: {fileID: 1686061806}
   - component: {fileID: 1686061805}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_01 (31)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6375,7 +7858,7 @@ GameObject:
   - component: {fileID: 1708419334}
   - component: {fileID: 1708419333}
   - component: {fileID: 1708419332}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_hill_small_02 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6478,7 +7961,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1740586862}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6582,7 +8065,7 @@ GameObject:
   - component: {fileID: 1780261167}
   - component: {fileID: 1780261166}
   - component: {fileID: 1780261165}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_mountain_01 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6688,7 +8171,7 @@ GameObject:
   - component: {fileID: 1820680930}
   - component: {fileID: 1820680929}
   - component: {fileID: 1820680928}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_02 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6888,7 +8371,7 @@ GameObject:
   - component: {fileID: 1847360674}
   - component: {fileID: 1847360673}
   - component: {fileID: 1847360672}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_hill_small_01 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6994,7 +8477,7 @@ GameObject:
   - component: {fileID: 1873166500}
   - component: {fileID: 1873166499}
   - component: {fileID: 1873166498}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7100,7 +8583,7 @@ GameObject:
   - component: {fileID: 1944211988}
   - component: {fileID: 1944211987}
   - component: {fileID: 1944211986}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_01 (43)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7206,7 +8689,7 @@ GameObject:
   - component: {fileID: 1947413286}
   - component: {fileID: 1947413285}
   - component: {fileID: 1947413284}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_01 (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7312,7 +8795,7 @@ GameObject:
   - component: {fileID: 1950792861}
   - component: {fileID: 1950792860}
   - component: {fileID: 1950792859}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_hill_small_02 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7406,6 +8889,32 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1950792857}
   m_Mesh: {fileID: 4300000, guid: 87dc0b67e5fe70f40a31e17b0c0058b4, type: 3}
+--- !u!1 &1954606748 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5789147024560196790, guid: 33fe42f49117d4c459d1c89e92dff2d5, type: 3}
+  m_PrefabInstance: {fileID: 372171364}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1954606750
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954606748}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.7314224, y: 4.290653, z: 6.1826134}
+  m_Center: {x: 0.7052207, y: 0.30630016, z: -1.5305386}
 --- !u!1 &1967617127
 GameObject:
   m_ObjectHideFlags: 0
@@ -7418,7 +8927,7 @@ GameObject:
   - component: {fileID: 1967617131}
   - component: {fileID: 1967617130}
   - component: {fileID: 1967617129}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_01 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7524,7 +9033,7 @@ GameObject:
   - component: {fileID: 2007572973}
   - component: {fileID: 2007572972}
   - component: {fileID: 2007572971}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_01 (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7630,7 +9139,7 @@ GameObject:
   - component: {fileID: 2067891155}
   - component: {fileID: 2067891154}
   - component: {fileID: 2067891153}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_hill_small_02 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7736,7 +9245,7 @@ GameObject:
   - component: {fileID: 2136266250}
   - component: {fileID: 2136266249}
   - component: {fileID: 2136266248}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rpgpp_lt_terrain_grass_01 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7834,6 +9343,8 @@ MeshFilter:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1364631171}
   - {fileID: 1832425271}
   - {fileID: 1740586862}
+  - {fileID: 1340076631}
+  - {fileID: 153500097}
+  - {fileID: 372171364}
