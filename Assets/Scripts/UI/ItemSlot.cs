@@ -3,24 +3,79 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
+using static UnityEditor.Progress;
 
-public class ItemSlot : MonoBehaviour
+public class ItemSlot : MonoBehaviour, IPointerClickHandler
 {
-    [SerializeField] ItemTooltip ItemInfo;
+    public ItemData item;
+    public Image icon;
+    [SerializeField] ItemTooltip tooltip;
     public TextMeshProUGUI quantityText;
+    public Inventory inventory;
+
+    public int idx;
+    public int quantity;
+    public bool equipped;
+
+    Image bg;
+    Button button;
 
     void Start()
     {
+        bg = GetComponent<Image>();
+        button = GetComponent<Button>();
+
         quantityText.raycastTarget = false;
+    }
+
+    public void Set()
+    {
+        icon.sprite = item.icon;
+        quantityText.text = quantity > 1 ? quantity.ToString() : string.Empty;
+
+        icon.gameObject.SetActive(true);
+    }
+
+    public void Clear()
+    {
+        item = null;
+        icon.sprite = null;
+        quantityText.text = string.Empty;
+
+        icon.gameObject.SetActive(false);
     }
 
     public void OnPointerEnter()
     {
-        ItemInfo.gameObject.SetActive(true);
+        if (!item)
+            return;
+
+        tooltip.gameObject.SetActive(true);
+        tooltip.SetTooltipText(item);
+
+        bg.color = Color.gray;
     }
 
     public void OnPointerExit()
     {
-        ItemInfo.gameObject.SetActive(false);
+        if (!item)
+            return;
+
+        tooltip.gameObject.SetActive(false);
+        bg.color = new Color(0, 0, 0, 80f / 255f);
+    }
+   
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (eventData.button == PointerEventData.InputButton.Left) // 마우스 좌클릭
+        {
+            // 아이템 선택
+            inventory.SelectItem(idx);
+        }
+        else if (eventData.button == PointerEventData.InputButton.Right) // 마우스 우클릭
+        {
+            // 아이템 장착
+        }
     }
 }
