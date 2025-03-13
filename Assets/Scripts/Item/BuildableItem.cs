@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class BuildableItem : MonoBehaviour
+public class BuildableItem : Item
 {
     private Camera camera;
     [SerializeField] private LayerMask layerMask;
