@@ -8,6 +8,8 @@ public class BuildableItem : Item
     private Camera camera;
     [SerializeField] private LayerMask layerMask;
     private float buildDistance = 10f;
+    private bool canInstall = false;
+    public bool isInstalled = false;
 
     // Start is called before the first frame update
     void Start()
@@ -18,10 +20,13 @@ public class BuildableItem : Item
     // Update is called once per frame
     void Update()
     {
-        OnHit();
+        if (!isInstalled)
+        {
+            OnHit();
+        }
     }
 
-    public void OnHit()
+    private void OnHit()
     {
         Ray ray = camera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
         RaycastHit hit;
@@ -36,12 +41,20 @@ public class BuildableItem : Item
             transform.up = hit.normal;
 
             transform.rotation = Quaternion.LookRotation(transform.forward, hit.normal);
+            CharacterManager.Instance.Player.controller.clickAction = SetArchitecture;
         }
         else
         {
             transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
             transform.localPosition = new Vector3(0.8f, 1, 1);
             transform.localRotation = Quaternion.Euler(0, 0, 0);
+            CharacterManager.Instance.Player.controller.clickAction = null;
         }
+    }
+
+    private void SetArchitecture()
+    {
+        transform.SetParent(null);
+        isInstalled = true;
     }
 }

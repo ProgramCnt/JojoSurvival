@@ -24,6 +24,8 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody rigidbody;
 
+    public Action clickAction;
+
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody>();
@@ -115,5 +117,13 @@ public class PlayerController : MonoBehaviour
     {
         Cursor.lockState = toggle ? CursorLockMode.None : CursorLockMode.Locked;
         canLook = !toggle;
+    }
+
+    public void OnClickMouseLeft(InputAction.CallbackContext context)
+    {
+        if(context.phase == InputActionPhase.Started)
+        {
+            clickAction?.Invoke();
+        }
     }
 }
