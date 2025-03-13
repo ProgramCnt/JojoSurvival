@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 66820024}
   - component: {fileID: 66820026}
   - component: {fileID: 66820025}
+  - component: {fileID: 66820027}
   m_Layer: 5
   m_Name: Thirst
   m_TagString: Untagged
@@ -200,6 +201,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 66820023}
   m_CullTransparentMesh: 1
+--- !u!114 &66820027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 66820023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c19d7aeeed9439383e932c599664a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curValue: 0
+  maxValue: 100
+  startValue: 100
+  passiveValue: 5
+  uiBar: {fileID: 1308354662}
 --- !u!1 &75855641
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,6 +229,7 @@ GameObject:
   - component: {fileID: 75855642}
   - component: {fileID: 75855644}
   - component: {fileID: 75855643}
+  - component: {fileID: 75855645}
   m_Layer: 5
   m_Name: Hunger
   m_TagString: Untagged
@@ -277,6 +296,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 75855641}
   m_CullTransparentMesh: 1
+--- !u!114 &75855645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75855641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c19d7aeeed9439383e932c599664a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curValue: 0
+  maxValue: 500
+  startValue: 400
+  passiveValue: 20
+  uiBar: {fileID: 2031396804}
 --- !u!1 &236480185
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,6 +474,7 @@ GameObject:
   - component: {fileID: 536559113}
   - component: {fileID: 536559115}
   - component: {fileID: 536559114}
+  - component: {fileID: 536559116}
   m_Layer: 5
   m_Name: Health
   m_TagString: Untagged
@@ -504,6 +541,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 536559112}
   m_CullTransparentMesh: 1
+--- !u!114 &536559116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536559112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c19d7aeeed9439383e932c599664a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curValue: 0
+  maxValue: 100
+  startValue: 100
+  passiveValue: 1
+  uiBar: {fileID: 236480187}
 --- !u!1 &570804429
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,6 +604,7 @@ GameObject:
   - component: {fileID: 617639242}
   - component: {fileID: 617639244}
   - component: {fileID: 617639243}
+  - component: {fileID: 617639245}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -589,7 +644,7 @@ Transform:
   m_GameObject: {fileID: 617639238}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.23, y: 0, z: -0.85}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -725,15 +780,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8824097ae4f9048b998dbe6fc6f2182c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0
-  jumpPower: 0
+  moveSpeed: 5
+  jumpPower: 80
   groundLayerMask:
     serializedVersion: 2
     m_Bits: 0
   cameraContainer: {fileID: 0}
-  minXLook: 0
-  maxXLook: 0
-  lookSensitivity: 0
+  minXLook: -65
+  maxXLook: 65
+  lookSensitivity: 0.1
   canLook: 1
 --- !u!114 &617639244
 MonoBehaviour:
@@ -748,6 +803,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 0}
+  condition: {fileID: 0}
+--- !u!114 &617639245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617639238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21bb802c13d474511966f3af4308c072, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiCondition: {fileID: 0}
+  noHungerHealthDecay: 2
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1242,6 +1312,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1536953874}
   - component: {fileID: 1536953875}
+  - component: {fileID: 1536953876}
+  - component: {fileID: 1536953877}
   m_Layer: 5
   m_Name: Conditions
   m_TagString: Untagged
@@ -1289,7 +1361,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 0
+  m_Spacing: 10
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -1297,6 +1369,35 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &1536953876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536953873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 237a1b6abf32642cfa0c7bbc09d2a9a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 536559116}
+  hunger: {fileID: 75855645}
+  stamina: {fileID: 66820027}
+--- !u!114 &1536953877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536953873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21bb802c13d474511966f3af4308c072, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiCondition: {fileID: 0}
+  noHungerHealthDecay: 2
 --- !u!1 &1799276620
 GameObject:
   m_ObjectHideFlags: 0
