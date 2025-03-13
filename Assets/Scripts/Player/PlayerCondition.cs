@@ -1,7 +1,11 @@
 using System;
 using UnityEngine;
 
-public class PlayerCondition : MonoBehaviour
+public interface IDamageable
+{
+    void TakePhysicalDamage(int damage);
+}
+public class PlayerCondition : MonoBehaviour, IDamageable
 {
     public UICondition uiCondition;
 
@@ -42,4 +46,11 @@ public class PlayerCondition : MonoBehaviour
     {
         Debug.Log("플레이어가 죽었다.");
     }
+
+    public void TakePhysicalDamage(int damage)
+    {
+        health.Subtract(damage);
+        onTakeDamage?.Invoke();
+    }
+
 }
