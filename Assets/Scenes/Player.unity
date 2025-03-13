@@ -363,8 +363,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ec7934661ac544b288433d33e4974c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 0}
-  flashSpeed: 0
+  image: {fileID: 198764751}
+  flashSpeed: 0.5
 --- !u!114 &198764751
 MonoBehaviour:
   m_ObjectHideFlags: 0
