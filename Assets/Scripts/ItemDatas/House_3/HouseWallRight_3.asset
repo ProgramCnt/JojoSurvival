@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd36247081ec694b91946f2924dd07a, type: 3}
+  m_Name: HouseWallRight_3
+  m_EditorClassIdentifier: 
+  itemName: "\uC9D1\uC758 \uC606\uBA74"
+  description: "\uC9D1\uC758 \uC624\uB978\uCABD\uBA74\uC774\uB2E4"
+  icon: {fileID: 0}
+  dropPrefab: {fileID: 3226156906106443616, guid: 36a60319afaf50b41b4dab4ad8e105b6, type: 3}
+  type: 2
+  canStack: 0
+  maxStackAmount: 0
+  equipmentData:
+    equipPrefab: {fileID: 0}
+  consumableData: []
