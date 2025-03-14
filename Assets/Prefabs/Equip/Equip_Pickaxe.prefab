@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1274683168093449203}
   - component: {fileID: 1477745090732062672}
   - component: {fileID: 3756101415822217618}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Equip_Pickaxe
   m_TagString: Untagged
   m_Icon: {fileID: 0}

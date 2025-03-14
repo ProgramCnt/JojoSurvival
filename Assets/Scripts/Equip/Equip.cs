@@ -63,7 +63,7 @@ public class Equip : MonoBehaviour
             // 맞은 대상이 NPC일경우
             //else if (hit.collider.TryGetComponent())
             {
-
+                
             }
         }
     }

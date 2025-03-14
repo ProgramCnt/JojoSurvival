@@ -38,7 +38,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
     {
         icon.sprite = item.icon;
         quantityText.text = quantity > 1 ? $"{quantity.ToString()}/{item.maxStackAmount}" : string.Empty;
-        bg.color = equipped ? EquipColor : bg.color;
+        bg.color = equipped ? EquipColor : baseColor;
 
         icon.gameObject.SetActive(true);
     }
@@ -60,16 +60,13 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
         tooltip.gameObject.SetActive(true);
         tooltip.SetTooltipText(item);
 
-        bg.color = onPointColor;
+        bg.color = equipped ? EquipColor : onPointColor;
     }
 
     public void OnPointerExit()
     {
-        if (!item)
-            return;
-
         tooltip.gameObject.SetActive(false);
-        bg.color = baseColor;
+        bg.color = equipped ? EquipColor : baseColor;
     }
    
     public void OnPointerClick(PointerEventData eventData)
