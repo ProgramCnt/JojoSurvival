@@ -25,6 +25,8 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rigidbody;
 
     public Action clickAction;
+    public event Action actionInventory;
+    public event Action actionInteract;
 
     private void Awake()
     {
@@ -124,6 +126,15 @@ public class PlayerController : MonoBehaviour
         if(context.phase == InputActionPhase.Started)
         {
             clickAction?.Invoke();
+        }
+    }
+
+    public void OnInventory(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Started)
+        {
+            actionInventory?.Invoke();
+            ToggleCursor(Cursor.lockState == CursorLockMode.Locked);
         }
     }
 }

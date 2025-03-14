@@ -12,8 +12,16 @@ public class Inventory : MonoBehaviour
     int selectedIdx;
     int curEquipIdx;
 
+    PlayerCondition condition;
+    PlayerController controller;
+
     private void Start()
     {
+        condition = CharacterManager.Instance.Player.condition;
+        controller = CharacterManager.Instance.Player.controller;
+        controller.actionInventory += ToggleInventory;
+
+        // 아이템 슬롯 초기화작업
         slots = GetComponentsInChildren<ItemSlot>();
         for (int i = 0; i < slots.Length; i++)
         {
@@ -22,14 +30,7 @@ public class Inventory : MonoBehaviour
         }
 
         UpdateUI();
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            ToggleInventory();
-        }
+        gameObject.SetActive(false);
     }
 
     private void OnDisable()
@@ -124,18 +125,18 @@ public class Inventory : MonoBehaviour
 
     void UseConsumable(ItemData item)
     {
-        for (int i = 0; i < item.consumableData.Length; i++)
+        foreach (ConsumableData data in item.consumableData)
         {
-            switch (item.consumableData[i].type)
+            switch (data.type)
             {
                 case ConsumableType.Health:
-                    
+                    condition.Heal(data.value);
                     break;
                 case ConsumableType.Hunger:
-                    
+                    condition.Eat(data.value);
                     break;
                 case ConsumableType.Thirst:
-
+                    // 목마름 회복
                     break;
             }
         }
