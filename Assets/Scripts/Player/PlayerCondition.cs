@@ -11,6 +11,7 @@ public class PlayerCondition : MonoBehaviour, IDamageable
 
     Condition health { get { return uiCondition.health; } }
     Condition hunger { get { return uiCondition.hunger; } }
+    Condition thirst { get { return uiCondition.thirst; } }
     Condition stamina { get { return uiCondition.stamina; } }
 
     public float noHungerHealthDecay;
