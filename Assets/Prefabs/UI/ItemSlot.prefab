@@ -275,6 +275,9 @@ MonoBehaviour:
   tooltip: {fileID: 0}
   quantityText: {fileID: 349121470033639039}
   inventory: {fileID: 0}
+  baseColor: {r: 0, g: 0, b: 0, a: 0.3137255}
+  onPointColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.3137255}
+  EquipColor: {r: 0, g: 0.93424654, b: 1, a: 0.3137255}
   idx: 0
   quantity: 0
   equipped: 0

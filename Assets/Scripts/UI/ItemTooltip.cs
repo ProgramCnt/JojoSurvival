@@ -9,19 +9,24 @@ public class ItemTooltip : MonoBehaviour
     public TextMeshProUGUI itemName;
     public TextMeshProUGUI itemDesc;
     public TextMeshProUGUI statInfo;
-   
+    public Vector2 tooltipOffset;
+
+    RectTransform rt;
+
     private void Start()
     {
         itemName.raycastTarget = false;
         itemDesc.raycastTarget = false;
         statInfo.raycastTarget = false;
+
+        rt = GetComponent<RectTransform>();
     }
 
     void Update()
     {
         Vector2 mousePos = Input.mousePosition;
-
-        transform.position = mousePos + new Vector2(10, -10);
+        
+        rt.position = mousePos + tooltipOffset;
     }
 
     public void SetTooltipText(ItemData data)

@@ -14,6 +14,11 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
     public TextMeshProUGUI quantityText;
     public Inventory inventory;
 
+    [Header("Slot Background Color")]
+    public Color baseColor;
+    public Color onPointColor;
+    public Color EquipColor;
+
     public int idx;
     public int quantity;
     public bool equipped;
@@ -32,7 +37,8 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
     public void Set()
     {
         icon.sprite = item.icon;
-        quantityText.text = quantity > 1 ? quantity.ToString() : string.Empty;
+        quantityText.text = quantity > 1 ? $"{quantity.ToString()}/{item.maxStackAmount}" : string.Empty;
+        bg.color = equipped ? EquipColor : bg.color;
 
         icon.gameObject.SetActive(true);
     }
@@ -54,7 +60,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
         tooltip.gameObject.SetActive(true);
         tooltip.SetTooltipText(item);
 
-        bg.color = Color.gray;
+        bg.color = onPointColor;
     }
 
     public void OnPointerExit()
@@ -63,7 +69,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
             return;
 
         tooltip.gameObject.SetActive(false);
-        bg.color = new Color(0, 0, 0, 80f / 255f);
+        bg.color = baseColor;
     }
    
     public void OnPointerClick(PointerEventData eventData)
@@ -75,7 +81,8 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
         }
         else if (eventData.button == PointerEventData.InputButton.Right) // 마우스 우클릭
         {
-            // 아이템 장착
+            // 아이템 사용
+            inventory.OnClickUseItem(idx);
         }
     }
 }
