@@ -1,6 +1,10 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/LowPolyFoodLite/LowPolyFoodLite_2020.3.0_HDRP_v1.0.unitypackage.meta
+guid: e8d1d59b4af53fb4685894e0972082fc
+========
 guid: 6e804f8889a26409bb57abcc5db796b2
 folderAsset: yes
+>>>>>>>> origin/develop:Assets/Health_image.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
