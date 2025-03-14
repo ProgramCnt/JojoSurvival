@@ -12,8 +12,17 @@ public class Inventory : MonoBehaviour
     int selectedIdx;
     int curEquipIdx;
 
+    PlayerCondition condition;
+    PlayerController controller;
+
     private void Start()
     {
+        condition = CharacterManager.Instance.Player.condition;
+        controller = CharacterManager.Instance.Player.controller;
+        controller.actionInventory += ToggleInventory;
+        CharacterManager.Instance.Player.addItem += AddItem;
+
+        // 아이템 슬롯 초기화작업
         slots = GetComponentsInChildren<ItemSlot>();
         for (int i = 0; i < slots.Length; i++)
         {
@@ -22,14 +31,7 @@ public class Inventory : MonoBehaviour
         }
 
         UpdateUI();
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            ToggleInventory();
-        }
+        gameObject.SetActive(false);
     }
 
     private void OnDisable()
@@ -102,7 +104,16 @@ public class Inventory : MonoBehaviour
 
     public void OnThrowButtonClick()
     {
-        Debug.Log("버리기");
+        if (selectedItem)
+        {
+            ThrowItem(selectedItem);
+            RemoveItem(selectedIdx);
+
+            selectedItem = null;
+            selectedIdx = -1;
+
+            Debug.Log("버리기");
+        }
     }
 
     public void OnClickUseItem(int idx)
@@ -117,25 +128,25 @@ public class Inventory : MonoBehaviour
                 RemoveItem(idx);
                 break;
             case ItemType.Equipment:
-                Equipment(slots[idx]);
+                EquipItem(slots[idx]);
                 break;
         }
     }
 
     void UseConsumable(ItemData item)
     {
-        for (int i = 0; i < item.consumableData.Length; i++)
+        foreach (ConsumableData data in item.consumableData)
         {
-            switch (item.consumableData[i].type)
+            switch (data.type)
             {
                 case ConsumableType.Health:
-                    
+                    condition.Heal(data.value);
                     break;
                 case ConsumableType.Hunger:
-                    
+                    condition.Eat(data.value);
                     break;
                 case ConsumableType.Thirst:
-
+                    // 목마름 회복
                     break;
             }
         }
@@ -146,7 +157,7 @@ public class Inventory : MonoBehaviour
         if (slots[idx].equipped)
         {
             slots[idx].equipped = false;
-            //장착 해제
+            CharacterManager.Instance.Player.equip.UnEquip();
         }
 
         slots[idx].quantity--;
@@ -160,17 +171,23 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    void Equipment(ItemSlot slot)
+    void EquipItem(ItemSlot slot)
     {
         if (slots[curEquipIdx].equipped)
         {
             slots[curEquipIdx].equipped = false;
-            // 현재 장착중인 장비 해제
+            CharacterManager.Instance.Player.equip.UnEquip();
+            slots[curEquipIdx].Set();
+
+            // 지금 장착한 아이템과 장착하려는 아이템이 같으면 리턴
+            if (slots[curEquipIdx].item == slot.item)
+                return;
         }
 
         curEquipIdx = slot.idx;
         slot.equipped = true;
-        //장비 장착
+        CharacterManager.Instance.Player.equip.Equip(slot.item);
+        slot.Set();
     }
 
     IEnumerator FollowItemIcon()
@@ -199,5 +216,75 @@ public class Inventory : MonoBehaviour
         {
             gameObject.SetActive(true);
         }
+    }
+
+    void AddItem()
+    {
+        ItemData newItem = CharacterManager.Instance.Player.itemData;
+        ItemSlot slot;
+
+        // 중첩가능한 아이템슬롯 찾기
+        if (newItem.canStack)
+        {
+            slot = GetStackItemSlot(newItem);
+            if (slot)
+            {
+                slot.quantity++;
+                CharacterManager.Instance.Player.itemData = null;
+
+                slot.Set();
+                return;
+            }
+        }
+
+        // 빈슬롯
+        slot = GetEmptySlot();
+        if (slot)
+        {
+            slot.item = newItem;
+            slot.quantity = 1;
+            CharacterManager.Instance.Player.itemData = null;
+
+            slot.Set();
+            return;
+        }
+
+        // 아이템슬롯이 꽉찬 상태
+        ThrowItem(newItem);
+        CharacterManager.Instance.Player.itemData = null;
+    }
+
+    ItemSlot GetStackItemSlot(ItemData item)
+    {
+        foreach (ItemSlot slot in slots)
+        {
+            if (slot.item == item && slot.quantity < slot.item.maxStackAmount)
+            {
+                return slot;
+            }
+        }
+
+        return null;
+    }
+
+    ItemSlot GetEmptySlot()
+    {
+        foreach(ItemSlot slot in slots)
+        {
+            if (!slot.item)
+            {
+                return slot;
+            }
+        }
+
+        return null;
+    }
+
+    void ThrowItem(ItemData item)
+    {
+        Transform playerPos = CharacterManager.Instance.Player.transform;
+        Vector3 dropPos = playerPos.position + playerPos.forward + playerPos.up;
+
+        Instantiate(item.dropPrefab, dropPos, Quaternion.Euler(Vector3.one * Random.value * 360));
     }
 }
