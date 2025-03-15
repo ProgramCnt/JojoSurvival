@@ -4,12 +4,8 @@ using UnityEngine;
 
 public class Equip : MonoBehaviour
 {
-    public float attackRate;
-    public float attackDistance;
-    public float useStamina;
-    public float damage;
-    public bool canCraft;
     bool attacking;
+    public ItemData itemData;
 
     Animator anim;
     Camera mainCamera;
@@ -38,7 +34,7 @@ public class Equip : MonoBehaviour
             {
                 attacking = true;
                 anim.SetTrigger("Attack");
-                Invoke("OnCanAttack", attackRate);
+                Invoke("OnCanAttack", itemData.equipmentData.attackRate);
             }
         }
     }
@@ -53,18 +49,24 @@ public class Equip : MonoBehaviour
         Ray ray = mainCamera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, attackDistance))
+        if (Physics.Raycast(ray, out hit, itemData.equipmentData.attackDistance))
         {
-            // 맞은 대상이 자원이고 자원을 캐는 도구일때
-            //if (canCraft && hit.collider.TryGetComponent())
-            {
 
-            }
-            // 맞은 대상이 NPC일경우
-            //else if (hit.collider.TryGetComponent())
+            // 맞은 대상이 자원이고 자원을 캐는 도구일때
+            IEntity entity;
+            if (hit.collider.TryGetComponent<IEntity>(out entity))
             {
-                
+                entity.OnTakeDamage(itemData.equipmentData.damage);
             }
+            //if (itemData.equipmentData.canCraft && hit.collider.TryGetComponent<IEntity>(out entity))
+            //{
+            //    entity.OnTakeDamage(itemData.equipmentData.damage);
+            //}
+            //// 맞은 대상이 NPC일경우
+            //else if (hit.collider.TryGetComponent<IEntity>(out entity))
+            //{
+
+            //}
         }
     }
 }

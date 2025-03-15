@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 33313641749024866}
   - component: {fileID: 23205945808381882}
   - component: {fileID: 4102555614246040995}
+  - component: {fileID: -3830902851594203237}
   m_Layer: 0
   m_Name: rpgpp_lt_tree_02
   m_TagString: Resource
@@ -105,3 +106,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.8479091, y: 7.891563, z: 0.81352735}
   m_Center: {x: -0.013936102, y: 3.9457815, z: 0.075380445}
+--- !u!114 &-3830902851594203237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458573784885960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dca058eca629d3c4b87d0425edb43937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropItem: {fileID: 11400000, guid: 9ee462218bc3dd8438a91d3012828447, type: 2}
