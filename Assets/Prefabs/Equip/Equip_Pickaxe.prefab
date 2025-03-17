@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8557747361324796526}
   - component: {fileID: 1274683168093449203}
   - component: {fileID: 1477745090732062672}
-  - component: {fileID: 3756101415822217618}
+  - component: {fileID: 3374398886142129697}
   m_Layer: 7
   m_Name: Equip_Pickaxe
   m_TagString: Untagged
@@ -106,7 +106,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3756101415822217618
+--- !u!114 &3374398886142129697
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5339994856639424604}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cf2449f41feb03439dad66f18ad8676, type: 3}
+  m_Script: {fileID: 11500000, guid: 048f5d5502565974cb26848c5e7b5eee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 693e17ede88426c4da35530a7ded75b7, type: 2}

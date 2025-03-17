@@ -11,8 +11,10 @@ GameObject:
   - component: {fileID: 7684828244773785835}
   - component: {fileID: 6044821137185645960}
   - component: {fileID: 7002286957859974181}
-  - component: {fileID: 4436612286532740097}
-  m_Layer: 0
+  - component: {fileID: 1428988635236911676}
+  - component: {fileID: -6487274608310461605}
+  - component: {fileID: 8880065082865191922}
+  m_Layer: 10
   m_Name: Wall_Left_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,7 +86,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &4436612286532740097
+--- !u!114 &1428988635236911676
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,10 +95,56 @@ MonoBehaviour:
   m_GameObject: {fileID: 8896350736202098222}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a805cb8891467b4b82da1cdef337f86, type: 3}
+  m_Script: {fileID: 11500000, guid: 9ba205cc1923ebe45b9430a369ccfcc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: cb86c3db59741fb4dbb5b26d33f23a66, type: 2}
-  layerMask:
+--- !u!64 &-6487274608310461605
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8896350736202098222}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: a38b1d1e20befcf43a077956d65695c4, type: 3}
+--- !u!54 &8880065082865191922
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8896350736202098222}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

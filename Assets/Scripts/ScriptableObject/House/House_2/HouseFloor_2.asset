@@ -14,11 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: "\uC9D1\uC758 \uBC14\uB2E5"
   description: "\uC9D1\uC758 \uBC14\uB2E5\uC774\uB2E4"
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 460c3918cc611c14aa52f9b38e20ed99, type: 3}
   dropPrefab: {fileID: 2828217804349680956, guid: dd85a44ed0cf62d429c2b5f04b4440b0, type: 3}
-  type: 2
+  type: 0
   canStack: 0
   maxStackAmount: 0
   equipmentData:
-    equipPrefab: {fileID: 0}
+    equipPrefab: {fileID: 2828217804349680956, guid: 59724a8827d5b1c4fa134660ca515499, type: 3}
+    attackRate: 0
+    attackDistance: 5
+    useStamina: 0
+    damage: 0
+    equipType: 3
+    canCraft: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 512
   consumableData: []
