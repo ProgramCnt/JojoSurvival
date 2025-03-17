@@ -2,13 +2,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public interface IState
-{
-    public void StateEnter();
-    public void StateUpdate();
-    public void StateExit();
-}
-
 public enum NPCState
 {
     Idle,

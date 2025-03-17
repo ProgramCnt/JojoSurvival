@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 23009263249696568}
   - component: {fileID: 7388254918685997931}
   - component: {fileID: -3188128998702396253}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rpgpp_lt_tree_pine_01
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -118,6 +118,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dca058eca629d3c4b87d0425edb43937, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curHealth: 0
-  maxHealth: 100
+  capacity: 3
+  entityType: 1
   dropItem: {fileID: 11400000, guid: 9ee462218bc3dd8438a91d3012828447, type: 2}

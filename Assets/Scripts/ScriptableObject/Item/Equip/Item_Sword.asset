@@ -25,5 +25,6 @@ MonoBehaviour:
     attackDistance: 3
     useStamina: 10
     damage: 40
+    equipType: 2
     canCraft: 0
   consumableData: []
