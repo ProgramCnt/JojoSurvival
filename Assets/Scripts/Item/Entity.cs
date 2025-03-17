@@ -8,35 +8,28 @@ public enum EntityType
     Tree
 }
 
-public class Entity : MonoBehaviour, IEntity
+public class Entity : MonoBehaviour
 {
-    public int curHealth;
-    public int maxHealth;
+    public int capacity;
 
     public EntityType entityType;
     public ItemData dropItem;
 
-    // Start is called before the first frame update
-    void Start()
+    public void OnTakeDamage(RaycastHit hit)
     {
-        curHealth = maxHealth;
-    }
-
-    public void OnTakeDamage(int damage)
-    {
-        curHealth -= damage;
-        if (damage > 0)
+        capacity--;
+        if (hit.point != null && hit.normal != null)
         {
-            DropItem();
+            DropItem(hit);
         }
-        if (curHealth <= 0)
+        if (capacity <= 0)
         {
             Destroy(gameObject);
         }
     }
 
-    void DropItem()
+    void DropItem(RaycastHit hit)
     {
-        Instantiate(dropItem.dropPrefab, transform.position + (Vector3.up * 0.5f), Quaternion.identity);
+        Instantiate(dropItem.dropPrefab, hit.point + Vector3.up, Quaternion.LookRotation(hit.normal, Vector3.up));
     }
 }

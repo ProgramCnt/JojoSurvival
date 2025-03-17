@@ -47,27 +47,15 @@ public class CraftItem : Equip
                 {
                     if (entity.entityType == EntityType.Tree)
                     {
-                        entity.OnTakeDamage(data.equipmentData.damage);
-                    }
-                    else
-                    {
-                        entity.OnTakeDamage(0);
+                        entity.OnTakeDamage(hit);
                     }
                 }
                 else if (data.equipmentData.canCraft && data.equipmentData.equipType == EquipType.Pickaxe)
                 {
                     if (entity.entityType == EntityType.Rock)
                     {
-                        entity.OnTakeDamage(data.equipmentData.damage);
+                        entity.OnTakeDamage(hit);
                     }
-                    else
-                    {
-                        entity.OnTakeDamage(0);
-                    }
-                }
-                else
-                {
-                    entity.OnTakeDamage(0);
                 }
             }
         }
