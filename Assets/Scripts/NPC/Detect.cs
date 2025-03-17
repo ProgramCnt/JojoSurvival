@@ -11,10 +11,22 @@ public class Detect : MonoBehaviour
 
     private float _playerDistance;
 
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(transform.position, transform.position + transform.forward * _detectRange);
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireSphere(transform.position, _attackRange);
+    }
+
     void Start()
     {
-        _playerTrs = CharacterManager.Instance.Player.transform;
         _controller = GetComponent<NPCStateController>();
+
+        if (CharacterManager.Instance.Player != null)
+        {
+            _playerTrs = CharacterManager.Instance.Player.transform;
+        }
     }
 
     void Update()

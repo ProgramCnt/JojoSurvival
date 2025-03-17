@@ -16,8 +16,10 @@ public class NPCCombat : MonoBehaviour, IDamageable
     private void Start()
     {
         _curHP = _npcMaxHP;
-        if(CharacterManager.Instance != null)
-        _playerCondition = CharacterManager.Instance.Player.condition;
+        if (CharacterManager.Instance.Player != null)
+        {
+            _playerCondition = CharacterManager.Instance.Player.condition;
+        }
     }
 
     public void TakePhysicalDamage(int _damage)

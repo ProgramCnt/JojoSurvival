@@ -14,7 +14,10 @@ public class NPCChaseState : IState
         this._controller = _con;
         this._agent = _ag;
         this._runSpeed = _speed;
-        _playerTrs = CharacterManager.Instance.Player.transform;
+        if (CharacterManager.Instance.Player != null)
+        {
+            _playerTrs = CharacterManager.Instance.Player.transform;
+        }
     }
 
     public void StateEnter()
@@ -28,7 +31,7 @@ public class NPCChaseState : IState
     {
         NavMeshPath path = new NavMeshPath();
 
-        if(_agent.CalculatePath(_playerTrs.position, path))
+        if(_playerTrs != null && _agent.CalculatePath(_playerTrs.position, path))
         {
             _agent.SetDestination(_playerTrs.position);
         }

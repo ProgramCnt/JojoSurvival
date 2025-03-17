@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -56,7 +54,6 @@ public class NPCStateController : MonoBehaviour
     public NPCState CurNPCState { get { return _npcState; } }
 
     private Dictionary<string, IState> _dicState;
-    private List<IState> _listState;
 
     private readonly int Idle = Animator.StringToHash("Idle");
     private readonly int Walk = Animator.StringToHash("Walk");
@@ -72,24 +69,24 @@ public class NPCStateController : MonoBehaviour
 
     private void Init()
     {
-        //_listState = new List<IState>
-        //{
-        //    new NPCIdleState(this, _minStateChangeTime, _maxStateChangeTime),
-        //    new NPCWanderState(this, _agent, _minWanderDistance, _maxWanderDistance, _walkSpeed)
-        //};
-
         _dicState.Add(_stateKeys[0], new NPCIdleState(this, _minStateChangeTime, _maxStateChangeTime));
         _dicState.Add(_stateKeys[1], new NPCWanderState(this, _agent, _minWanderDistance, _maxWanderDistance, _walkSpeed));
 
         if(_combatAttitud == CombatAttitude.Chase)
         {
-            //_listState.Add(new NPCChaseState(this, _agent, _runSpeed));
-            //_listState.Add(new NPCAttackState(this, _attackRate));
             _dicState.Add(_stateKeys[2], new NPCChaseState(this, _agent, _runSpeed));
             _dicState.Add(_stateKeys[3], new NPCAttackState(this, _attackRate));
         }
 
         StateChange(_npcState);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, _minWanderDistance);
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, _maxWanderDistance);
     }
 
     private void Update()
@@ -111,27 +108,25 @@ public class NPCStateController : MonoBehaviour
             case NPCState.Idle:
                 _anim.SetBool(Idle, true);
                 _anim.SetBool(Walk, false);
-                //_curState = _listState[0];
+                _agent.isStopped = true;
                 _curState = _dicState[_stateKeys[0]];
                 break;
 
             case NPCState.Wander:
                 _anim.SetBool(Idle, true);
                 _anim.SetBool(Walk, true);
-                //_curState = _listState[1];
                 _curState = _dicState[_stateKeys[1]];
                 break;
 
             case NPCState.Chase:
             case NPCState.Run:
                 _anim.SetBool(Idle, false);
-                //_curState = _dicState[_stateKeys[2]];
                 _curState = _dicState[_stateKeys[2]];
                 break;
 
             case NPCState.Attack:
-                //_curState = _dicState[_stateKeys[3]];
                 _anim.SetTrigger(Attack);
+                _agent.isStopped = true;
                 _curState = _dicState[_stateKeys[3]];
                 break;
         }

@@ -7,7 +7,6 @@ public class NPCIdleState : IState
     [SerializeField] private float _minIdleTime = 1f;
     private float _maxIdleTime = 3f;
     private float _idleTime = 0f;
-    private bool _onState = false;
 
     public NPCIdleState(NPCStateController _con, float _min, float _max)
     {

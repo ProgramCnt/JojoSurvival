@@ -52,11 +52,11 @@ public class NPCWanderState : MonoBehaviour, IState
 
         do
         {
-            NavMesh.SamplePosition(transform.position + (Random.onUnitSphere
+            NavMesh.SamplePosition(_controller.transform.position + (Random.onUnitSphere
                 * Random.Range(_minWanderDistance, _maxWanderDistance)), out hit, _maxWanderDistance, NavMesh.AllAreas);
             i++;
             if (i == 30) break;
-        } while (Vector3.Distance(transform.position, hit.position) < _minWanderDistance);
+        } while (Vector3.Distance(_controller.transform.position, hit.position) < _minWanderDistance);
 
         return hit.position;
     }
