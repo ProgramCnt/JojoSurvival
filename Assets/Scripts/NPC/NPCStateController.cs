@@ -18,16 +18,18 @@ public enum NPCState
     Run
 }
 
+public enum CombatAttitude
+{
+    Chase,
+    Flee
+}
+
 public class NPCStateController : MonoBehaviour
 {
-    enum CombatAttitude
-    {
-        Chase,
-        Flee
-    }
 
     [Header("State")]
     [SerializeField] private CombatAttitude _combatAttitud;
+    public CombatAttitude CA { get { return _combatAttitud; } }
     [SerializeField] private string[] _stateKeys;
 
     [Space, Header("대기 상태 유지 시간")]
@@ -49,6 +51,7 @@ public class NPCStateController : MonoBehaviour
     private NavMeshAgent _agent;
     private NPCCombat _combat;
     public NPCCombat Combat { get { return _combat; } }
+    
     private IState _curState;
     [SerializeField] private NPCState _npcState = NPCState.Idle;
     public NPCState CurNPCState { get { return _npcState; } }
@@ -64,7 +67,12 @@ public class NPCStateController : MonoBehaviour
         _anim = GetComponentInChildren<Animator>();
         _agent = GetComponent<NavMeshAgent>();
         _dicState = new Dictionary<string, IState>();
+    }
+
+    private void Start()
+    {
         Init();
+        
     }
 
     private void Init()
@@ -76,6 +84,10 @@ public class NPCStateController : MonoBehaviour
         {
             _dicState.Add(_stateKeys[2], new NPCChaseState(this, _agent, _runSpeed));
             _dicState.Add(_stateKeys[3], new NPCAttackState(this, _attackRate));
+        }
+        else
+        {
+            _dicState.Add(_stateKeys[2], new NPCFleeState(this, _agent, _runSpeed));
         }
 
         StateChange(_npcState);
@@ -109,6 +121,7 @@ public class NPCStateController : MonoBehaviour
                 _anim.SetBool(Idle, true);
                 _anim.SetBool(Walk, false);
                 _agent.isStopped = true;
+                _agent.speed = 1;
                 _curState = _dicState[_stateKeys[0]];
                 break;
 
@@ -127,6 +140,7 @@ public class NPCStateController : MonoBehaviour
             case NPCState.Attack:
                 _anim.SetTrigger(Attack);
                 _agent.isStopped = true;
+                _agent.speed = 1f;
                 _curState = _dicState[_stateKeys[3]];
                 break;
         }

@@ -12,9 +12,11 @@ public class NPCCombat : MonoBehaviour, IDamageable
 
     private SkinnedMeshRenderer[] _meshRenderers;
     private PlayerCondition _playerCondition;
+    private NPCStateController _controller;
 
     private void Start()
     {
+        _controller = GetComponent<NPCStateController>();
         _curHP = _npcMaxHP;
         if (CharacterManager.Instance.Player != null)
         {
@@ -32,6 +34,15 @@ public class NPCCombat : MonoBehaviour, IDamageable
         }
 
         StartCoroutine(DamageFlash());
+        
+        if(_controller.CA == CombatAttitude.Chase)
+        {
+            _controller.StateChange(NPCState.Chase);
+        }
+        else
+        {
+            _controller.StateChange(NPCState.Run);
+        }
     }
 
     void Die()

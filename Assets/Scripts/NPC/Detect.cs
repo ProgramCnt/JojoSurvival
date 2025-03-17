@@ -42,19 +42,41 @@ public class Detect : MonoBehaviour
         
         if(_playerDistance < _detectRange && IsPlayerInFieldOfView())
         {
-            if(_playerDistance < _attackRange && _controller.CurNPCState != NPCState.Attack)
-            {
-                _controller.StateChange(NPCState.Attack);
+            if(_controller.CA == CombatAttitude.Chase)
+            { 
+                if(_playerDistance < _attackRange)
+                {
+                    _controller.StateChange(NPCState.Attack);
+                }
+                else
+                {
+                    if (_controller.CurNPCState == NPCState.Attack)
+                    {
+                        Invoke("ChangeChaseState", 2f);
+                    }
+                    else
+                    {
+                        _controller.StateChange(NPCState.Chase);
+                    }
+                }
             }
-            else if(_controller.CurNPCState != NPCState.Chase)
+            else
             {
-                _controller.StateChange(NPCState.Chase);
+                _controller.StateChange(NPCState.Run);
             }
         }
         else
         {
-            _controller.StateChange(NPCState.Idle);
+            if (_controller.CurNPCState != NPCState.Run)
+            {
+                _controller.StateChange(NPCState.Idle);
+            }
         }
+    }
+
+    void ChangeChaseState()
+    {
+        _controller.StateChange(NPCState.Chase);
     }
 
     private bool IsPlayerInFieldOfView()
