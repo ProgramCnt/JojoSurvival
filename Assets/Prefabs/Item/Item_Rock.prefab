@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5332541823735690141}
   - component: {fileID: 9217822131306711861}
   - component: {fileID: 2773113883437775403}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Item_Rock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,4 +147,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ba205cc1923ebe45b9430a369ccfcc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 0}
+  data: {fileID: 11400000, guid: 822429d5019e9524b8ea609071e91a44, type: 2}

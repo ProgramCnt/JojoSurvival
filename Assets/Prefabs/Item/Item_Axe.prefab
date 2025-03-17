@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8962405386490813745}
   - component: {fileID: 9093938723187819107}
   - component: {fileID: 4520602070465305042}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Item_Axe
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -9,6 +9,7 @@ public class ResourceSpawner : MonoBehaviour
     public Vector3 spawnAreaSize = new Vector3(10f, 0f, 10f);
     public Transform player;
     private float playerAvoidRadius = 5f;
+    public LayerMask groundMask;
 
     private Dictionary<ResourceType, List<GameObject>> spawnedResources = new Dictionary<ResourceType, List<GameObject>>();
 
@@ -37,7 +38,7 @@ public class ResourceSpawner : MonoBehaviour
                 Random.Range(-spawnAreaSize.z / 2, spawnAreaSize.z / 2)
             ) + transform.position;
 
-            if (Physics.Raycast(randomPosition, Vector3.down, out RaycastHit hit, 100f))
+            if (Physics.Raycast(randomPosition, Vector3.down, out RaycastHit hit, 100f, groundMask))
             {
                 Vector3 spawnPosition = hit.point;
 
@@ -58,7 +59,7 @@ public class ResourceSpawner : MonoBehaviour
                     // 나무 종류를 랜덤 선택
                     GameObject randomPrefab = resourceType.prefabs[Random.Range(0, resourceType.prefabs.Count)];
 
-                    GameObject newResource = Instantiate(randomPrefab, spawnPosition, Quaternion.identity, transform);
+                    GameObject newResource = Instantiate(randomPrefab, spawnPosition + (Vector3.down * 0.2f), Quaternion.identity, transform);
                     spawnedResources[resourceType].Add(newResource);
                     spawnedCount++;
                 }

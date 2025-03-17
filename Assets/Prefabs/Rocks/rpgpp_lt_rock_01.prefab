@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 33191280486744630}
   - component: {fileID: 23952086938741286}
   - component: {fileID: 8260930518545787868}
+  - component: {fileID: -3343569868998634389}
   m_Layer: 0
   m_Name: rpgpp_lt_rock_01
   m_TagString: Resource
@@ -29,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -106,3 +107,18 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 305f277e1529222439b495a441de2f0b, type: 3}
+--- !u!114 &-3343569868998634389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689892608009186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dca058eca629d3c4b87d0425edb43937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curHealth: 0
+  maxHealth: 100
+  dropItem: {fileID: 11400000, guid: 822429d5019e9524b8ea609071e91a44, type: 2}

@@ -11,6 +11,7 @@ public class PlayerCondition : MonoBehaviour, IDamageable
 
     Condition health { get { return uiCondition.health; } }
     Condition hunger { get { return uiCondition.hunger; } }
+    Condition thirst { get { return uiCondition.thirst; } }
     Condition stamina { get { return uiCondition.stamina; } }
 
     public float noHungerHealthDecay;
@@ -19,6 +20,7 @@ public class PlayerCondition : MonoBehaviour, IDamageable
     private void Update()
     {
         hunger.Subtract(hunger.passiveValue * Time.deltaTime);
+        thirst.Subtract(thirst.passiveValue * Time.deltaTime);
         stamina.Add(stamina.passiveValue * Time.deltaTime);
 
         if (hunger.curValue == 0f)
