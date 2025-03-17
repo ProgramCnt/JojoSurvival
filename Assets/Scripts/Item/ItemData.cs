@@ -20,7 +20,8 @@ public enum EquipType
 {
     Axe,
     Pickaxe,
-    Weapon
+    Weapon,
+    Buildable
 }
 
 [CreateAssetMenu(fileName = "Item", menuName = "Item/New Item")]
