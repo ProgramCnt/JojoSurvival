@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scenes/EnvironmentScene.unity.meta
+guid: 3dcd1c55775f7cc478b06e00aac36d31
+========
 guid: 5ad072fd547dfba44963cdb6a09ad69f
+>>>>>>>> develop:Assets/Scenes/NPCTestScene.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

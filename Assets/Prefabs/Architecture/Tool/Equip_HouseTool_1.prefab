@@ -424,10 +424,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 49467141444586268}
+  - component: {fileID: 7915259803227533686}
   - component: {fileID: 8846147197339808039}
-  - component: {fileID: -4377801490114830160}
   m_Layer: 9
-  m_Name: HouseTool_1
+  m_Name: Equip_HouseTool_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -454,6 +454,20 @@ Transform:
   - {fileID: 6516493563509636785}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7915259803227533686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7421244798676157692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a805cb8891467b4b82da1cdef337f86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: ac145bb293f5be345a9d80829ee2b064, type: 2}
+  mainCamera: {fileID: 0}
 --- !u!65 &8846147197339808039
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -469,25 +483,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 4.3787127, y: 4.213899, z: 6.1710815}
   m_Center: {x: 0.47384405, y: 2.1425989, z: -1.4936409}
---- !u!114 &-4377801490114830160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7421244798676157692}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ba205cc1923ebe45b9430a369ccfcc9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: ac145bb293f5be345a9d80829ee2b064, type: 2}
 --- !u!1 &9074757302129575328
 GameObject:
   m_ObjectHideFlags: 0
