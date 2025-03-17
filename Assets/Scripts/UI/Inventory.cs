@@ -172,6 +172,25 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    public void RemoveItem(int idx, int removeAmount)
+    {
+        if (slots[idx].equipped)
+        {
+            slots[idx].equipped = false;
+            CharacterManager.Instance.Player.equip.UnEquip();
+        }
+
+        slots[idx].quantity -= removeAmount;
+        if (slots[idx].quantity <= 0)
+        {
+            slots[idx].Clear();
+        }
+        else
+        {
+            slots[idx].Set();
+        }
+    }
+
     void EquipItem(ItemSlot slot)
     {
         if (slots[curEquipIdx].equipped)
@@ -292,5 +311,47 @@ public class Inventory : MonoBehaviour
     public bool IsSelectedItem()
     {
         return selectedItem ? true : false;
+    }
+
+    public int GetItemQuantity(ItemData item)
+    {
+        int totalQuantity = 0;
+
+        foreach (ItemSlot slot in slots)
+        {
+            if (slot.item == null)
+                continue;
+
+            if (slot.item == item)
+            {
+                totalQuantity += slot.quantity;
+            }
+        }
+
+        return totalQuantity;
+    }
+
+    public int GetItemQuantity(int idx)
+    {
+        return slots[idx].quantity;
+    }
+
+    public int GetItemSlotIndex(ItemData item)
+    {
+        int SlotIdx = -1;
+
+        foreach (ItemSlot slot in slots)
+        {
+            if (slot.item == null)
+                continue;
+
+            if (slot.item == item)
+            {
+                SlotIdx = slot.idx;
+                break;
+            }
+        }
+
+        return SlotIdx;
     }
 }
