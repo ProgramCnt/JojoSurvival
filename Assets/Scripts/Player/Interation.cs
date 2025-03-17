@@ -68,6 +68,7 @@ public class Interation : MonoBehaviour
             curInteractable.OnInteract();
 
             // 현재 아이템 지워주기
+            Destroy(curInteractGO);
             curInteractGO = null;
             curInteractable = null;
             promptText.gameObject.SetActive(false);

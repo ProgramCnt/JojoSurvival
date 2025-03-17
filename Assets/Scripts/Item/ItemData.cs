@@ -16,6 +16,14 @@ public enum ConsumableType
     Thirst
 }
 
+public enum EquipType
+{
+    Axe,
+    Pickaxe,
+    Weapon,
+    Buildable
+}
+
 [CreateAssetMenu(fileName = "Item", menuName = "Item/New Item")]
 public class ItemData : ScriptableObject
 {
@@ -42,7 +50,9 @@ public class EquipmentData
     public float attackDistance;
     public float useStamina;
     public int damage;
+    public EquipType equipType;
     public bool canCraft;
+    public LayerMask layerMask;
 }
 
 [Serializable]
