@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ResourceType
+public enum EntityType
 {
     Rock,
     Tree
@@ -13,7 +13,7 @@ public class Entity : MonoBehaviour, IEntity
     public int curHealth;
     public int maxHealth;
 
-    public ResourceType entityType;
+    public EntityType entityType;
     public ItemData dropItem;
 
     // Start is called before the first frame update
@@ -24,19 +24,19 @@ public class Entity : MonoBehaviour, IEntity
 
     public void OnTakeDamage(int damage)
     {
-        if (ResourceType.Rock == entityType)
+        curHealth -= damage;
+        if (damage > 0)
         {
             DropItem();
-            curHealth -= damage;
-            if (curHealth <= 0)
-            {
-                Destroy(gameObject);
-            }
+        }
+        if (curHealth <= 0)
+        {
+            Destroy(gameObject);
         }
     }
 
     void DropItem()
     {
-        Instantiate(dropItem.dropPrefab, transform.position, Quaternion.identity);
+        Instantiate(dropItem.dropPrefab, transform.position + (Vector3.up * 0.5f), Quaternion.identity);
     }
 }
