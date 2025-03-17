@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1740502220200802731}
   - component: {fileID: 8248626278718070375}
   - component: {fileID: 2269395800466994321}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 7892172856981166503}
   - component: {fileID: 3059918109666694625}
   - component: {fileID: 6350859531510802714}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Equip_Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,8 +150,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cf2449f41feb03439dad66f18ad8676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRate: 1
-  attackDistance: 0
-  useStamina: 0
-  damage: 0
-  canCraft: 0
+  itemData: {fileID: 11400000, guid: 57a04d0fa90dca840bc3060e72b05409, type: 2}

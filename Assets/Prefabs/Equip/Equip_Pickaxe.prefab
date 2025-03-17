@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1274683168093449203}
   - component: {fileID: 1477745090732062672}
   - component: {fileID: 3756101415822217618}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Equip_Pickaxe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,8 +118,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cf2449f41feb03439dad66f18ad8676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRate: 1
-  attackDistance: 0
-  useStamina: 0
-  damage: 0
-  canCraft: 0
+  itemData: {fileID: 11400000, guid: 693e17ede88426c4da35530a7ded75b7, type: 2}

@@ -38,6 +38,11 @@ public class ItemData : ScriptableObject
 public class EquipmentData
 {
     public GameObject equipPrefab;
+    public float attackRate;
+    public float attackDistance;
+    public float useStamina;
+    public int damage;
+    public bool canCraft;
 }
 
 [Serializable]

@@ -21,4 +21,9 @@ MonoBehaviour:
   maxStackAmount: 0
   equipmentData:
     equipPrefab: {fileID: 5339994856639424604, guid: 5b3e201af7fb1704aa1ad47a4db92f19, type: 3}
+    attackRate: 1
+    attackDistance: 2
+    useStamina: 5
+    damage: 35
+    canCraft: 1
   consumableData: []
