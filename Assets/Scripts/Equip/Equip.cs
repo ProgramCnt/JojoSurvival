@@ -50,10 +50,37 @@ public class Equip : MonoBehaviour
         {
 
             // 맞은 대상이 자원이고 자원을 캐는 도구일때
-            IEntity entity;
-            if (hit.collider.TryGetComponent<IEntity>(out entity))
+            if (hit.collider.TryGetComponent<Entity>(out Entity entity))
             {
-                entity.OnTakeDamage(itemData.equipmentData.damage);
+                if (itemData.equipmentData != null)
+                {
+                    if (itemData.equipmentData.canCraft && itemData.equipmentData.equipType == EquipType.Axe)
+                    {
+                        if (entity.entityType == EntityType.Tree)
+                        {
+                            entity.OnTakeDamage(itemData.equipmentData.damage);
+                        }
+                        else
+                        {
+                            entity.OnTakeDamage(0);
+                        }
+                    }
+                    else if (itemData.equipmentData.canCraft && itemData.equipmentData.equipType == EquipType.Pickaxe)
+                    {
+                        if (entity.entityType == EntityType.Rock)
+                        {
+                            entity.OnTakeDamage(itemData.equipmentData.damage);
+                        }
+                        else
+                        {
+                            entity.OnTakeDamage(0);
+                        }
+                    }
+                    else
+                    {
+                        entity.OnTakeDamage(0);
+                    }
+                }
             }
             //if (itemData.equipmentData.canCraft && hit.collider.TryGetComponent<IEntity>(out entity))
             //{
