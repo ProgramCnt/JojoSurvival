@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 60115927200931294}
   - component: {fileID: 8962405386490813745}
   - component: {fileID: 9093938723187819107}
-  - component: {fileID: 4520602070465305042}
+  - component: {fileID: 8843097266848300077}
   m_Layer: 10
   m_Name: Item_Axe
   m_TagString: Untagged
@@ -135,7 +135,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4520602070465305042
+--- !u!114 &8843097266848300077
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

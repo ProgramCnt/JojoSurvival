@@ -20,7 +20,8 @@ public enum EquipType
 {
     Axe,
     Pickaxe,
-    Weapon
+    Weapon,
+    Buildable
 }
 
 [CreateAssetMenu(fileName = "Item", menuName = "Item/New Item")]
@@ -51,6 +52,7 @@ public class EquipmentData
     public int damage;
     public EquipType equipType;
     public bool canCraft;
+    public LayerMask layerMask;
 }
 
 [Serializable]

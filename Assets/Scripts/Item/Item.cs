@@ -16,6 +16,6 @@ public class Item : MonoBehaviour, IInteractable
         // 아이템 상호작용 기능
         CharacterManager.Instance.Player.itemData = data;
         CharacterManager.Instance.Player.addItem?.Invoke();
-        Destroy(gameObject);
+        //Destroy(gameObject);
     }
 }
