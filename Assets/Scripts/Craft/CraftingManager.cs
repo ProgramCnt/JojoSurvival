@@ -13,23 +13,28 @@ public class CraftingManager : MonoBehaviour
     
     public CraftingRecipe seletedRecipe;
 
+    private void Start()
+    {
+        
+    }
+
     public void ShowCraftList()
     {
         
     }
 
-    public bool TryCraft()
+    public void TryCraft()
     {
-        if (!seletedRecipe) 
-            return false;
+        if (!seletedRecipe)
+            return;
 
         // 레시피 재료가 있는지 인벤토리에서 검사
         foreach (Ingredient ingredient in seletedRecipe.Ingredients)
         {
             int curQuantity = inventory.GetItemQuantity(ingredient.item);
-            
+
             if (curQuantity < ingredient.quantity)
-                return false;
+                return;
         }
 
         // 레시피 재료가 있다면
@@ -64,6 +69,6 @@ public class CraftingManager : MonoBehaviour
         // 레시피 결과아이템 인벤토리에 추가
         inventory.AddItem(seletedRecipe.resultItem);
 
-        return true;
+        return;
     }
 }

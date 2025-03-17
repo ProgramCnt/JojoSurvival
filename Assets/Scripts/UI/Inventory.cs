@@ -274,6 +274,37 @@ public class Inventory : MonoBehaviour
         CharacterManager.Instance.Player.itemData = null;
     }
 
+    public void AddItem(ItemData Item)
+    {
+        ItemData newItem = Item;
+        ItemSlot slot;
+
+        // ¡ﬂ√∏∞°¥…«— æ∆¿Ã≈€ΩΩ∑‘ √£±‚
+        if (newItem.canStack)
+        {
+            slot = GetStackItemSlot(newItem);
+            if (slot)
+            {
+                slot.quantity++;
+                slot.Set();
+                return;
+            }
+        }
+
+        // ∫ÛΩΩ∑‘
+        slot = GetEmptySlot();
+        if (slot)
+        {
+            slot.item = newItem;
+            slot.quantity = 1;
+            slot.Set();
+            return;
+        }
+
+        // æ∆¿Ã≈€ΩΩ∑‘¿Ã ≤À¬˘ ªÛ≈¬
+        ThrowItem(newItem);
+    }
+
     ItemSlot GetStackItemSlot(ItemData item)
     {
         foreach (ItemSlot slot in slots)
