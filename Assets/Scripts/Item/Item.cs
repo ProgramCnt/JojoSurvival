@@ -2,12 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-interface IInteractable
-{
-    public string GetInteractPrompt();
-    public void OnInteract();
-}
-
 public class Item : MonoBehaviour, IInteractable
 {
     public ItemData data;

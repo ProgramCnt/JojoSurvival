@@ -3,13 +3,6 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public interface IState
-{
-    public void StateEnter();
-    public void StateUpdate();
-    public void StateExit();
-}
-
 public class NPCStateController : MonoBehaviour
 {
     [SerializeField] protected float minStateChangeTime;
