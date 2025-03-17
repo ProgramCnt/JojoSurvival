@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.HID;
 using UnityEngine.UIElements;
 
 public class BuildableItem : Item
@@ -9,7 +10,7 @@ public class BuildableItem : Item
     [SerializeField] private LayerMask layerMask;
     private float buildDistance = 10f;
     private bool canInstall = false;
-    public bool isInstalled = false;
+    public bool isUse = false;
 
     // Start is called before the first frame update
     void Start()
@@ -18,12 +19,30 @@ public class BuildableItem : Item
     }
 
     // Update is called once per frame
-    void Update()
+    //void Update()
+    //{
+    //    if (isUse)
+    //    {
+    //        OnHit();
+    //    }
+    //}
+
+    private void SetPositionOnGround(RaycastHit hit)
     {
-        if (!isInstalled)
-        {
-            OnHit();
-        }
+        transform.localScale = new Vector3(1, 1, 1);
+        //transform.localRotation = Quaternion.Euler(90, 0, 0);
+
+        float offset = 0.1f;
+        transform.position = hit.point + hit.normal * offset;
+        transform.up = hit.normal;
+
+        transform.rotation = Quaternion.LookRotation(transform.forward, hit.normal);
+        CharacterManager.Instance.Player.controller.clickAction = SetArchitecture;
+    }
+
+    private void SetPositionOnPlayer()
+    {
+        transform.position = new Vector3(0.5f, 0.5f, 0.5f);
     }
 
     private void OnHit()
@@ -45,9 +64,9 @@ public class BuildableItem : Item
         }
         else
         {
-            transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
-            transform.localPosition = new Vector3(0.8f, 1, 1);
-            transform.localRotation = Quaternion.Euler(0, 0, 0);
+            //transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
+            //transform.localPosition = new Vector3(0.8f, 1, 1);
+            //transform.localRotation = Quaternion.Euler(0, 0, 0);
             CharacterManager.Instance.Player.controller.clickAction = null;
         }
     }
@@ -55,6 +74,6 @@ public class BuildableItem : Item
     private void SetArchitecture()
     {
         transform.SetParent(null);
-        isInstalled = true;
+        isUse = true;
     }
 }

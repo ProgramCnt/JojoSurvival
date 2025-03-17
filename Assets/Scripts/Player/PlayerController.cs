@@ -123,7 +123,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnClickMouseLeft(InputAction.CallbackContext context)
     {
-        if(context.phase == InputActionPhase.Started && canLook)
+        if (context.phase == InputActionPhase.Started && canLook)
         {
             clickAction?.Invoke();
         }

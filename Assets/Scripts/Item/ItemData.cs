@@ -43,6 +43,7 @@ public class EquipmentData
     public float useStamina;
     public int damage;
     public bool canCraft;
+    public LayerMask layerMask;
 }
 
 [Serializable]

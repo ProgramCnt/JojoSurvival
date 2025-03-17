@@ -29,18 +29,15 @@ public class Equip : MonoBehaviour
     {
         if (!attacking)
         {
-            // 플레이어 스테미너 사용 조건문
-            //if ()
-            {
-                attacking = true;
-                anim.SetTrigger("Attack");
-                Invoke("OnCanAttack", itemData.equipmentData.attackRate);
-            }
+            attacking = true;
+            Invoke("OnCanAttack", itemData.equipmentData.attackRate);
         }
     }
 
     void OnCanAttack()
     {
+        anim.SetTrigger("Attack");
+        CharacterManager.Instance.Player.controller.clickAction?.Invoke();
         attacking = false;
     }
 
@@ -49,7 +46,7 @@ public class Equip : MonoBehaviour
         Ray ray = mainCamera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, itemData.equipmentData.attackDistance))
+        if (Physics.Raycast(ray, out hit, itemData.equipmentData.attackDistance, itemData.equipmentData.layerMask))
         {
 
             // 맞은 대상이 자원이고 자원을 캐는 도구일때
