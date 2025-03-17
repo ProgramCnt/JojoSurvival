@@ -48,6 +48,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
         item = null;
         icon.sprite = null;
         quantityText.text = string.Empty;
+        bg.color = baseColor;
 
         icon.gameObject.SetActive(false);
     }
@@ -76,7 +77,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
             // 아이템 선택
             inventory.SelectItem(idx);
         }
-        else if (eventData.button == PointerEventData.InputButton.Right) // 마우스 우클릭
+        else if (eventData.button == PointerEventData.InputButton.Right && !inventory.IsSelectedItem()) // 마우스 우클릭
         {
             // 아이템 사용
             inventory.OnClickUseItem(idx);

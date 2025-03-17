@@ -89,6 +89,7 @@ public class Inventory : MonoBehaviour
             slots[idx].item = tempItem;
             slots[idx].quantity = tempQuantity;
             slots[idx].equipped = tempEquipped;
+            curEquipIdx = tempEquipped ? idx : curEquipIdx;
 
             // UI 업데이트
             if (slots[idx].item)
@@ -286,5 +287,10 @@ public class Inventory : MonoBehaviour
         Vector3 dropPos = playerPos.position + playerPos.forward + playerPos.up;
 
         Instantiate(item.dropPrefab, dropPos, Quaternion.Euler(Vector3.one * Random.value * 360));
+    }
+
+    public bool IsSelectedItem()
+    {
+        return selectedItem ? true : false;
     }
 }

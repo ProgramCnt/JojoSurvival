@@ -6747,6 +6747,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: {fileID: 9092113113674274258}
   hunger: {fileID: 5093627534644513145}
+  thirst: {fileID: 528639561215542649}
   stamina: {fileID: 528639561215542649}
 --- !u!114 &9092113113674274258
 MonoBehaviour:
