@@ -77,7 +77,9 @@ public class Detect : MonoBehaviour
         }
         else
         {
-            if (_controller.CurNPCState != NPCState.Run)
+            if (_controller.CurNPCState != NPCState.Run
+                && _controller.CurNPCState != NPCState.Idle
+                && _controller.CurNPCState != NPCState.Wander)
             {
                 _controller.StateChange(NPCState.Idle);
             }

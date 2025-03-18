@@ -107,7 +107,21 @@ public class NPCStateController : MonoBehaviour
 
     private void Update()
     {
-        _curState.StateUpdate();
+        if (_curState != null)
+        {
+            _curState.StateUpdate();
+        }
+
+        if(_npcState == NPCState.Idle || _npcState == NPCState.Attack)
+        {
+            _agent.isStopped = true;
+            _agent.velocity = Vector3.zero;
+            _agent.updateRotation = false;
+        }
+        else
+        {
+            _agent.updateRotation = true;
+        }
     }
 
     /// <summary>
@@ -131,8 +145,6 @@ public class NPCStateController : MonoBehaviour
             case NPCState.Idle:
                 _anim.SetBool(Idle, true);
                 _anim.SetBool(Walk, false);
-                _agent.isStopped = true;
-                _agent.speed = 1;
                 _curState = _dicState[_stateKeys[0]];
                 break;
 
@@ -150,8 +162,6 @@ public class NPCStateController : MonoBehaviour
 
             case NPCState.Attack:
                 _anim.SetTrigger(Attack);
-                _agent.isStopped = true;
-                _agent.speed = 1f;
                 _curState = _dicState[_stateKeys[3]];
                 break;
         }
