@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Interation : MonoBehaviour
 {
@@ -64,14 +65,17 @@ public class Interation : MonoBehaviour
     {
         if (curInteractGO)
         {
-            // ¾ÆÀÌÅÛ »óÈ£ÀÛ¿ë È£Ãâ
+            // ì•„ì´í…œ ìƒí˜¸ì‘ìš© í˜¸ì¶œ
             curInteractable.OnInteract();
 
-            // ÇöÀç ¾ÆÀÌÅÛ Áö¿öÁÖ±â
-            Destroy(curInteractGO);
+            // í˜„ì¬ ì•„ì´í…œ ì§€ì›Œì£¼ê¸°
+            if (curInteractGO.TryGetComponent(out Item item))
+            {
+                Destroy(curInteractGO);
+                promptText.gameObject.SetActive(false);
+            }
             curInteractGO = null;
             curInteractable = null;
-            promptText.gameObject.SetActive(false);
         }
     }
 }

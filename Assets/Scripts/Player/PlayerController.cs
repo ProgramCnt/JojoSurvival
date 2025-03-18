@@ -137,4 +137,12 @@ public class PlayerController : MonoBehaviour
             ToggleCursor(Cursor.lockState == CursorLockMode.Locked);
         }
     }
+
+    public void OnInteraction(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Started && canLook)
+        {
+            actionInteract?.Invoke();
+        }
+    }
 }
