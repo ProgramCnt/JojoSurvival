@@ -120,4 +120,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   description: "\uC6B0\uBB3C \uC0AC\uC6A9[E]"
-  lootItemData: {fileID: 0}
+  lootItemData: {fileID: 11400000, guid: bd819c3aa46defc4ca9cdf7c0244d329, type: 2}
