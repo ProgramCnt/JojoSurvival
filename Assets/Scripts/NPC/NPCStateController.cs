@@ -62,6 +62,7 @@ public class NPCStateController : MonoBehaviour
     {
         _anim = GetComponentInChildren<Animator>();
         _agent = GetComponent<NavMeshAgent>();
+        _combat = GetComponent<NPCCombat>();
         _dicState = new Dictionary<string, IState>();
     }
 
