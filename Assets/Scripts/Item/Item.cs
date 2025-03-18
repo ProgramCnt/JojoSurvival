@@ -12,9 +12,9 @@ public class Item : MonoBehaviour, IInteractable
         return $"{data.itemName}\n{data.description}";
     }
 
-    public void OnInteract()
+    public virtual void OnInteract()
     {
-        // ¾ÆÀÌÅÛ »óÈ£ÀÛ¿ë ±â´É
+        // ì•„ì´í…œ ìƒí˜¸ì‘ìš© ê¸°ëŠ¥
         CharacterManager.Instance.Player.itemData = data;
         CharacterManager.Instance.Player.addItem?.Invoke();
         //Destroy(gameObject);
