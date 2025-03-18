@@ -30,14 +30,19 @@ public class PlayerCondition : MonoBehaviour, IDamageable
         }
     }
 
-    public void Heal(float amount)
+    public void Heal(int amount)
     {
         health.Add(amount);
     }
 
-    public void Eat(float amount)
+    public void Eat(int amount)
     {
         hunger.Add(amount);
+    }
+
+    public void Drink(int amount)
+    {
+        thirst.Add(amount);
     }
 
     public void Die()
@@ -51,4 +56,8 @@ public class PlayerCondition : MonoBehaviour, IDamageable
         onTakeDamage?.Invoke();
     }
 
+    public void UseStamina(int use)
+    {
+        stamina.Subtract(use);
+    }
 }

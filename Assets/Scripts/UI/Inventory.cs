@@ -148,7 +148,7 @@ public class Inventory : MonoBehaviour
                     condition.Eat(data.value);
                     break;
                 case ConsumableType.Thirst:
-                    // 목마름 회복
+                    condition.Drink(data.value);
                     break;
             }
         }

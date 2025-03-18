@@ -45,5 +45,6 @@ public class Equip : Item
         {
             OffHitAction?.Invoke();
         }
+        CharacterManager.Instance.Player.condition.UseStamina(data.equipmentData.useStamina);
     }
 }

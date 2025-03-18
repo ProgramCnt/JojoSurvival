@@ -48,7 +48,7 @@ public class EquipmentData
     public GameObject equipPrefab;
     public float attackRate;
     public float attackDistance;
-    public float useStamina;
+    public int useStamina;
     public int damage;
     public EquipType equipType;
     public bool canCraft;
@@ -59,5 +59,5 @@ public class EquipmentData
 public class ConsumableData
 {
     public ConsumableType type;
-    public float value;
+    public int value;
 }

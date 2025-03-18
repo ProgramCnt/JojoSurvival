@@ -6,9 +6,11 @@ public class PlayerController : MonoBehaviour
 {
     [Header("Movement")]
     public float moveSpeed;
+    public float runSpeed;
     private Vector2 curMovementInput;
     public float jumpPower;
     public LayerMask groundLayerMask;
+    private bool _isSprint;
 
     [Header("Look")]
     public Transform cameraContainer;
@@ -36,6 +38,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        _isSprint = false;
     }
 
     private void FixedUpdate()
@@ -79,7 +82,16 @@ public class PlayerController : MonoBehaviour
     private void Move()
     {
         Vector3 dir = transform.forward * curMovementInput.y + transform.right * curMovementInput.x;
-        dir *= moveSpeed;
+        if (_isSprint)
+        {
+            dir *= runSpeed;
+            CharacterManager.Instance.Player.condition.UseStamina(1);
+        }
+        else
+        {
+            dir *= moveSpeed;
+        }
+        
         dir.y = rigidbody.velocity.y;
 
         rigidbody.velocity = dir;
@@ -143,6 +155,19 @@ public class PlayerController : MonoBehaviour
         if (context.phase == InputActionPhase.Started && canLook)
         {
             actionInteract?.Invoke();
+        }
+    }
+
+    public void OnSprint(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Performed && !IsGrounded())
+        {
+            _isSprint = true;
+
+        }
+        else if (context.phase == InputActionPhase.Canceled)
+        {
+            _isSprint = false;
         }
     }
 }
