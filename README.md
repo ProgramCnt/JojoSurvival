@@ -1,4 +1,4 @@
-![1조 아이템 수집및 채광](https://github.com/user-attachments/assets/32273ed8-ea9b-4c26-b87c-99b72e0b9a81)# 🏆 JoJo Survial
+# 🏆 JoJo Survial
 플레이어가 자원을 수집하고 여러 아이템들을 만들며 생존을 위해 적과 싸우는 **3D 서바이벌 게임**입니다!
 
 ---
