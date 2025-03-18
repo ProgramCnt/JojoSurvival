@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using TMPro;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
@@ -25,6 +26,8 @@ public class CraftingManager : MonoBehaviour
 
     public CraftingRecipe seletedRecipe;
 
+    List<GameObject> ingredientPool = new List<GameObject>();
+
     private void Start()
     {
         InitCraftItemList();
@@ -32,11 +35,17 @@ public class CraftingManager : MonoBehaviour
 
     private void OnDisable()
     {
-        craftItemIcon.sprite = null;
+        if (craftItemIcon.sprite)
+            craftItemIcon.sprite = null;
         craftItemIcon.gameObject.SetActive(false);
         craftItemName.text = "";
         craftItemDesc.text = "";
         craftItemSpec.text = "";
+
+        foreach (GameObject Go in ingredientPool)
+        {
+            Go.SetActive(false);
+        }
     }
 
     public void InitCraftItemList()
@@ -99,21 +108,15 @@ public class CraftingManager : MonoBehaviour
 
     public void SelectRecipe(CraftingRecipe recipe)
     {
+        // 아이템 설명
         craftItemIcon.sprite = recipe.resultItem.icon;
         craftItemIcon.gameObject.SetActive(true);
         craftItemName.text = recipe.resultItem.itemName;
         craftItemDesc.text = recipe.resultItem.description;
-        //string itemSpec;
-        //switch (recipe.resultItem.type)
-        //{
-        //    case ItemType.Equipment:
-        //        {
-        //            itemSepc += 
+        craftItemSpec.text = GetItemSpec(recipe.resultItem);
 
-        //            break;
-        //        }
-        //}
-        //craftItemSpec.text = recipe.resultItem.;
+        // 조합 재료 표시
+        SetIngredientItem(recipe);
     }
 
     void OnCraftButtonClick()
@@ -125,6 +128,63 @@ public class CraftingManager : MonoBehaviour
         else
         {
             Debug.Log("아이템 조합 실패");
+        }
+    }
+
+    string GetItemSpec(ItemData data)
+    {
+        StringBuilder sbDesc = new StringBuilder();
+
+        switch (data.type)
+        {
+            case ItemType.Equipment:
+                {
+                    sbDesc.AppendLine($"공격력: {data.equipmentData.damage}");
+                    sbDesc.AppendLine($"공격 딜레이: {data.equipmentData.attackRate}");
+                    sbDesc.AppendLine($"사거리: {data.equipmentData.attackDistance}");
+                    sbDesc.AppendLine($"스테미나: {data.equipmentData.useStamina}");
+                    break;
+                }
+
+            case ItemType.Consumable:
+                {
+                    foreach (ConsumableData consumeData in data.consumableData)
+                    {
+                        sbDesc.AppendLine($"{consumeData.type} {consumeData.value}");
+                    }
+                    break;
+                }
+        }
+
+        return sbDesc.ToString();
+    }
+
+    void SetIngredientItem(CraftingRecipe recipe)
+    {
+        int idx = 0;
+
+        foreach (Ingredient ingredient in recipe.Ingredients)
+        {
+            if (ingredientPool.Count < 0)
+            {
+                GameObject Go = ingredientPool[idx];
+                Go.GetComponent<IngredientItem>().icon.sprite = ingredient.item.icon;
+                Go.GetComponent<IngredientItem>().itemName.text = ingredient.item.itemName.ToString();
+                Go.GetComponent<IngredientItem>().itemCount.text = ingredient.quantity.ToString();
+
+                Go.SetActive(true);
+                idx++;
+            }
+            else
+            {
+                GameObject Go = Instantiate(ingredientPrefab, parentIngredient);
+                Go.GetComponent<IngredientItem>().icon.sprite = ingredient.item.icon;
+                Go.GetComponent<IngredientItem>().itemName.text = ingredient.item.itemName.ToString();
+                Go.GetComponent<IngredientItem>().itemCount.text = ingredient.quantity.ToString();
+
+                Go.SetActive(true);
+                ingredientPool.Add(Go);
+            }
         }
     }
 }
