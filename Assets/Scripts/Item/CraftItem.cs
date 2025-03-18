@@ -38,7 +38,7 @@ public class CraftItem : Equip
 
     public override void OnHitFunc(RaycastHit hit)
     {
-        // ¸ÂÀº ´ë»óÀÌ ÀÚ¿øÀÌ°í ÀÚ¿øÀ» Ä³´Â µµ±¸ÀÏ¶§
+        // ë§ì€ ëŒ€ìƒì´ ìì›ì´ê³  ìì›ì„ ìºëŠ” ë„êµ¬ì¼ë•Œ
         if (hit.collider.TryGetComponent<Entity>(out Entity entity))
         {
             if (data.equipmentData != null)
