@@ -71,31 +71,32 @@ public class Inventory : MonoBehaviour
         else if (selectedItem) 
         {
             ItemData tempItem = selectedItem;
-            bool tempEquipped = slots[selectedIdx].equipped;
             int tempQuantity = slots[selectedIdx].quantity;
+            bool tempEquipped = slots[selectedIdx].equipped;
 
             // 전에 선택된 아이템 슬롯
             slots[selectedIdx].item = slots[idx].item;
             slots[selectedIdx].quantity = slots[idx].quantity;
             slots[selectedIdx].equipped = slots[idx].equipped;
 
-            // UI 업데이트
-            if (slots[selectedIdx].item)
-                slots[selectedIdx].Set();
-            else
-                slots[selectedIdx].Clear();
-
             // 이후 선택된 아이템 슬롯
             slots[idx].item = tempItem;
             slots[idx].quantity = tempQuantity;
             slots[idx].equipped = tempEquipped;
-            curEquipIdx = tempEquipped ? idx : curEquipIdx;
+
+            // 아이템 장착 인덱스 변경
+            curEquipIdx = slots[selectedIdx].equipped ? slots[selectedIdx].idx : slots[idx].idx;
 
             // UI 업데이트
             if (slots[idx].item)
                 slots[idx].Set();
             else
                 slots[idx].Clear();
+
+            if (slots[selectedIdx].item)
+                slots[selectedIdx].Set();
+            else
+                slots[selectedIdx].Clear();
 
             // 아이템 슬롯 교체이후 비워주기
             selectedItem = null;
