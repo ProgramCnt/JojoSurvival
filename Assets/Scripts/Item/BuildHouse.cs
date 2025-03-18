@@ -24,5 +24,6 @@ public class BuildHouse : Item
             Instantiate(part.dropPrefab, CharacterManager.Instance.Player.transform.position + CharacterManager.Instance.Player.controller.cameraContainer.
                 transform.forward * 1.2f + CharacterManager.Instance.Player.controller.cameraContainer.transform.up * 3f, Quaternion.identity);
         }
+        parts.Clear();
     }
 }
