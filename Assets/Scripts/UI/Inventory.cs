@@ -89,6 +89,7 @@ public class Inventory : MonoBehaviour
             slots[idx].item = tempItem;
             slots[idx].quantity = tempQuantity;
             slots[idx].equipped = tempEquipped;
+            curEquipIdx = tempEquipped ? idx : curEquipIdx;
 
             // UI ¾÷µ¥ÀÌÆ®
             if (slots[idx].item)
@@ -161,6 +162,25 @@ public class Inventory : MonoBehaviour
         }
 
         slots[idx].quantity--;
+        if (slots[idx].quantity <= 0)
+        {
+            slots[idx].Clear();
+        }
+        else
+        {
+            slots[idx].Set();
+        }
+    }
+
+    public void RemoveItem(int idx, int removeAmount)
+    {
+        if (slots[idx].equipped)
+        {
+            slots[idx].equipped = false;
+            CharacterManager.Instance.Player.equip.UnEquip();
+        }
+
+        slots[idx].quantity -= removeAmount;
         if (slots[idx].quantity <= 0)
         {
             slots[idx].Clear();
@@ -254,6 +274,37 @@ public class Inventory : MonoBehaviour
         CharacterManager.Instance.Player.itemData = null;
     }
 
+    public void AddItem(ItemData Item)
+    {
+        ItemData newItem = Item;
+        ItemSlot slot;
+
+        // ÁßÃ¸°¡´ÉÇÑ ¾ÆÀÌÅÛ½½·Ô Ã£±â
+        if (newItem.canStack)
+        {
+            slot = GetStackItemSlot(newItem);
+            if (slot)
+            {
+                slot.quantity++;
+                slot.Set();
+                return;
+            }
+        }
+
+        // ºó½½·Ô
+        slot = GetEmptySlot();
+        if (slot)
+        {
+            slot.item = newItem;
+            slot.quantity = 1;
+            slot.Set();
+            return;
+        }
+
+        // ¾ÆÀÌÅÛ½½·ÔÀÌ ²ËÂù »óÅÂ
+        ThrowItem(newItem);
+    }
+
     ItemSlot GetStackItemSlot(ItemData item)
     {
         foreach (ItemSlot slot in slots)
@@ -286,5 +337,52 @@ public class Inventory : MonoBehaviour
         Vector3 dropPos = playerPos.position + playerPos.forward + playerPos.up;
 
         Instantiate(item.dropPrefab, dropPos, Quaternion.Euler(Vector3.one * Random.value * 360));
+    }
+
+    public bool IsSelectedItem()
+    {
+        return selectedItem ? true : false;
+    }
+
+    public int GetItemQuantity(ItemData item)
+    {
+        int totalQuantity = 0;
+
+        foreach (ItemSlot slot in slots)
+        {
+            if (slot.item == null)
+                continue;
+
+            if (slot.item == item)
+            {
+                totalQuantity += slot.quantity;
+            }
+        }
+
+        return totalQuantity;
+    }
+
+    public int GetItemQuantity(int idx)
+    {
+        return slots[idx].quantity;
+    }
+
+    public int GetItemSlotIndex(ItemData item)
+    {
+        int SlotIdx = -1;
+
+        foreach (ItemSlot slot in slots)
+        {
+            if (slot.item == null)
+                continue;
+
+            if (slot.item == item)
+            {
+                SlotIdx = slot.idx;
+                break;
+            }
+        }
+
+        return SlotIdx;
     }
 }
