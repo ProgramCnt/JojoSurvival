@@ -38,15 +38,9 @@ public class AttackItem : Equip
 
     public override void OnHitFunc(RaycastHit ray)
     {
-        base.OffHitFunc();
-        //if (itemData.equipmentData.canCraft && hit.collider.TryGetComponent<IEntity>(out entity))
-        //{
-        //    entity.OnTakeDamage(itemData.equipmentData.damage);
-        //}
-        //// 맞은 대상이 NPC일경우
-        //else if (hit.collider.TryGetComponent<IEntity>(out entity))
-        //{
-
-        //}
+        if (ray.collider.TryGetComponent(out IDamageable damagable))
+        {
+            damagable.TakePhysicalDamage(data.equipmentData.damage);
+        }
     }
 }
