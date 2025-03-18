@@ -53,6 +53,7 @@ public class NPCCombat : MonoBehaviour, IDamageable
             Instantiate(item.dropPrefab, transform.position + Vector3.up * 2, Quaternion.identity);
         }
 
+        StopAllCoroutines();
         Destroy(gameObject);
     }
 
