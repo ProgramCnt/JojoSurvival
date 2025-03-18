@@ -41,6 +41,6 @@ public class BuildableItem : Equip
     {
         transform.SetParent(null);
         GameObject houseTool = Instantiate(data.dropPrefab, transform.position, Quaternion.identity);
-        CharacterManager.Instance.Player.equip.UnEquip();
+        UIManager.Instance.Inventory.RemoveItem(UIManager.Instance.Inventory.GetItemSlotIndex(data), 1);
     }
 }

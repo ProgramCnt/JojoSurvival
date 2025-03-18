@@ -22,7 +22,7 @@ public class Inventory : MonoBehaviour
         controller.actionInventory += ToggleInventory;
         CharacterManager.Instance.Player.addItem += AddItem;
 
-        // ¾ÆÀÌÅÛ ½½·Ô ÃÊ±âÈ­ÀÛ¾÷
+        // ì•„ì´í…œ ìŠ¬ë¡¯ ì´ˆê¸°í™”ì‘ì—…
         slots = GetComponentsInChildren<ItemSlot>();
         for (int i = 0; i < slots.Length; i++)
         {
@@ -56,7 +56,7 @@ public class Inventory : MonoBehaviour
 
     public void SelectItem(int idx)
     {
-        // ¼±ÅÃµÈ ¾ÆÀÌÅÛÀÌ ¾øÀ» ¶§
+        // ì„ íƒëœ ì•„ì´í…œì´ ì—†ì„ ë•Œ
         if (!selectedItem) 
         {
             if (!slots[idx].item)
@@ -67,37 +67,37 @@ public class Inventory : MonoBehaviour
 
             StartCoroutine(FollowItemIcon());
         }
-        // ¼±ÅÃµÈ ¾ÆÀÌÅÛÀÌ ÀÖÀ» ¶§
+        // ì„ íƒëœ ì•„ì´í…œì´ ìˆì„ ë•Œ
         else if (selectedItem) 
         {
             ItemData tempItem = selectedItem;
             bool tempEquipped = slots[selectedIdx].equipped;
             int tempQuantity = slots[selectedIdx].quantity;
 
-            // Àü¿¡ ¼±ÅÃµÈ ¾ÆÀÌÅÛ ½½·Ô
+            // ì „ì— ì„ íƒëœ ì•„ì´í…œ ìŠ¬ë¡¯
             slots[selectedIdx].item = slots[idx].item;
             slots[selectedIdx].quantity = slots[idx].quantity;
             slots[selectedIdx].equipped = slots[idx].equipped;
 
-            // UI ¾÷µ¥ÀÌÆ®
+            // UI ì—…ë°ì´íŠ¸
             if (slots[selectedIdx].item)
                 slots[selectedIdx].Set();
             else
                 slots[selectedIdx].Clear();
 
-            // ÀÌÈÄ ¼±ÅÃµÈ ¾ÆÀÌÅÛ ½½·Ô
+            // ì´í›„ ì„ íƒëœ ì•„ì´í…œ ìŠ¬ë¡¯
             slots[idx].item = tempItem;
             slots[idx].quantity = tempQuantity;
             slots[idx].equipped = tempEquipped;
             curEquipIdx = tempEquipped ? idx : curEquipIdx;
 
-            // UI ¾÷µ¥ÀÌÆ®
+            // UI ì—…ë°ì´íŠ¸
             if (slots[idx].item)
                 slots[idx].Set();
             else
                 slots[idx].Clear();
 
-            // ¾ÆÀÌÅÛ ½½·Ô ±³Ã¼ÀÌÈÄ ºñ¿öÁÖ±â
+            // ì•„ì´í…œ ìŠ¬ë¡¯ êµì²´ì´í›„ ë¹„ì›Œì£¼ê¸°
             selectedItem = null;
             selectedIdx = -1;
         }
@@ -113,7 +113,7 @@ public class Inventory : MonoBehaviour
             selectedItem = null;
             selectedIdx = -1;
 
-            Debug.Log("¹ö¸®±â");
+            Debug.Log("ë²„ë¦¬ê¸°");
         }
     }
 
@@ -147,7 +147,7 @@ public class Inventory : MonoBehaviour
                     condition.Eat(data.value);
                     break;
                 case ConsumableType.Thirst:
-                    // ¸ñ¸¶¸§ È¸º¹
+                    // ëª©ë§ˆë¦„ íšŒë³µ
                     break;
             }
         }
@@ -199,7 +199,7 @@ public class Inventory : MonoBehaviour
             CharacterManager.Instance.Player.equip.UnEquip();
             slots[curEquipIdx].Set();
 
-            // Áö±İ ÀåÂøÇÑ ¾ÆÀÌÅÛ°ú ÀåÂøÇÏ·Á´Â ¾ÆÀÌÅÛÀÌ °°À¸¸é ¸®ÅÏ
+            // ì§€ê¸ˆ ì¥ì°©í•œ ì•„ì´í…œê³¼ ì¥ì°©í•˜ë ¤ëŠ” ì•„ì´í…œì´ ê°™ìœ¼ë©´ ë¦¬í„´
             if (slots[curEquipIdx].item == slot.item)
                 return;
         }
@@ -243,7 +243,7 @@ public class Inventory : MonoBehaviour
         ItemData newItem = CharacterManager.Instance.Player.itemData;
         ItemSlot slot;
 
-        // ÁßÃ¸°¡´ÉÇÑ ¾ÆÀÌÅÛ½½·Ô Ã£±â
+        // ì¤‘ì²©ê°€ëŠ¥í•œ ì•„ì´í…œìŠ¬ë¡¯ ì°¾ê¸°
         if (newItem.canStack)
         {
             slot = GetStackItemSlot(newItem);
@@ -257,7 +257,7 @@ public class Inventory : MonoBehaviour
             }
         }
 
-        // ºó½½·Ô
+        // ë¹ˆìŠ¬ë¡¯
         slot = GetEmptySlot();
         if (slot)
         {
@@ -269,7 +269,7 @@ public class Inventory : MonoBehaviour
             return;
         }
 
-        // ¾ÆÀÌÅÛ½½·ÔÀÌ ²ËÂù »óÅÂ
+        // ì•„ì´í…œìŠ¬ë¡¯ì´ ê½‰ì°¬ ìƒíƒœ
         ThrowItem(newItem);
         CharacterManager.Instance.Player.itemData = null;
     }
@@ -279,7 +279,7 @@ public class Inventory : MonoBehaviour
         ItemData newItem = Item;
         ItemSlot slot;
 
-        // ÁßÃ¸°¡´ÉÇÑ ¾ÆÀÌÅÛ½½·Ô Ã£±â
+        // ì¤‘ì²©ê°€ëŠ¥í•œ ì•„ì´í…œìŠ¬ë¡¯ ì°¾ê¸°
         if (newItem.canStack)
         {
             slot = GetStackItemSlot(newItem);
@@ -291,7 +291,7 @@ public class Inventory : MonoBehaviour
             }
         }
 
-        // ºó½½·Ô
+        // ë¹ˆìŠ¬ë¡¯
         slot = GetEmptySlot();
         if (slot)
         {
@@ -301,7 +301,7 @@ public class Inventory : MonoBehaviour
             return;
         }
 
-        // ¾ÆÀÌÅÛ½½·ÔÀÌ ²ËÂù »óÅÂ
+        // ì•„ì´í…œìŠ¬ë¡¯ì´ ê½‰ì°¬ ìƒíƒœ
         ThrowItem(newItem);
     }
 
