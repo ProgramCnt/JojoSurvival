@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class Detect : MonoBehaviour
 {
-    [SerializeField] private float _detectRange;
-    [SerializeField] private float _fieldOfView;
-    [SerializeField] private float _attackRange;
+    [SerializeField, Tooltip("감지 범위")] private float _detectRange;
+    [SerializeField, Tooltip("시야각")] private float _fieldOfView;
+    [SerializeField, Tooltip("공격 범위")] private float _attackRange;
 
     private Transform _playerTrs;
     private NPCStateController _controller;
@@ -34,24 +34,34 @@ public class Detect : MonoBehaviour
         DetectPlayer();
     }
 
+    /// <summary>
+    /// 플레이어 감지 함수
+    /// </summary>
     void DetectPlayer()
     {
         if (_playerTrs == null) return;
 
+        // 플레이어와의 거리
         _playerDistance = Vector3.Distance(transform.position, _playerTrs.position);
         
+        // 플레이어가 감지 범위 안에 있고 시야각 안에 있다면
         if(_playerDistance < _detectRange && IsPlayerInFieldOfView())
         {
+            // 플레이어 발견 시 추적하는 npc라면
             if(_controller.CA == CombatAttitude.Chase)
             { 
+                // 플레이어가 공격 범위 안에 있다면
                 if(_playerDistance < _attackRange)
                 {
+                    // 공격 상태로 전환
                     _controller.StateChange(NPCState.Attack);
                 }
                 else
-                {
+                {// 공격 범위 밖이라면
+                    // npc가 공격 상태라면
                     if (_controller.CurNPCState == NPCState.Attack)
                     {
+                        // 2초 대기 후 추적 상태로
                         Invoke("ChangeChaseState", 2f);
                     }
                     else
