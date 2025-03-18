@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 23050206849376476}
   - component: {fileID: -9075036074697752227}
   - component: {fileID: -5602563778379566528}
+  - component: {fileID: -6615151600111346109}
   m_Layer: 11
   m_Name: rpgpp_lt_tree_01
   m_TagString: Resource
@@ -121,3 +122,19 @@ MonoBehaviour:
   capacity: 3
   entityType: 1
   dropItem: {fileID: 11400000, guid: 9ee462218bc3dd8438a91d3012828447, type: 2}
+--- !u!208 &-6615151600111346109
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612273161005096}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.582, y: 3.7220001, z: 1.4070001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.33200002, y: 3.7220001, z: -0.40500003}
+  m_TimeToStationary: 0.5
