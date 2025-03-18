@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 23952086938741286}
   - component: {fileID: 8260930518545787868}
   - component: {fileID: -3343569868998634389}
+  - component: {fileID: 7488946706419014279}
   m_Layer: 11
   m_Name: rpgpp_lt_rock_01
   m_TagString: Resource
@@ -122,3 +123,19 @@ MonoBehaviour:
   capacity: 10
   entityType: 0
   dropItem: {fileID: 11400000, guid: 822429d5019e9524b8ea609071e91a44, type: 2}
+--- !u!208 &7488946706419014279
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689892608009186}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.309, y: 1.006, z: 1.0760001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.142, y: 0.12100001, z: 0.038000003}
+  m_TimeToStationary: 0.5

@@ -174,6 +174,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recipes:
   - {fileID: 11400000, guid: 12e09db996b1b334aaca7e1d6a45f828, type: 2}
+  - {fileID: 11400000, guid: 24ca3eff9c0b2ed4bab6c8328a7faf9f, type: 2}
+  - {fileID: 11400000, guid: 5ca98e0b39bca8c46b3224b00fc44ef9, type: 2}
+  - {fileID: 11400000, guid: 84785ddc21096ef42998cbd2482ff33f, type: 2}
+  - {fileID: 11400000, guid: 03d5b2f6ca1b41d46a12bc8d893048ae, type: 2}
+  - {fileID: 11400000, guid: 27d11781fe6716c4cb292b1fd2b956ba, type: 2}
+  - {fileID: 11400000, guid: 717bab9b3d3755742968fbc93619f43d, type: 2}
+  - {fileID: 11400000, guid: 00923a9cfddc54446a914443744e732f, type: 2}
+  - {fileID: 11400000, guid: 0595475eef7d51f41bb8a2e6c6c0b2c2, type: 2}
+  - {fileID: 11400000, guid: cd5fd297e20ae5340ad26e2385201b54, type: 2}
   inventory: {fileID: 768926819}
   parentCraftItem: {fileID: 946288597}
   craftItemPrefab: {fileID: 7213744232604205650, guid: 4b5d4b7b1bda65041b72b6061f3240ef, type: 3}
@@ -465,7 +474,7 @@ MonoBehaviour:
     - {fileID: 1612273161005096, guid: d434eb85247ad604ab43ca7b7b689f27, type: 3}
     - {fileID: 1458573784885960, guid: 1231ad7e49f8fae4d9fc44135e904a0d, type: 3}
     - {fileID: 1369031296425274, guid: 1cbc33920c4b568479c9fdc50d433d1f, type: 3}
-    maxCount: 20
+    maxCount: 60
     respawnThreshold: 5
     minSpacing: 15
     spawnChance: 0.5
@@ -474,7 +483,7 @@ MonoBehaviour:
     - {fileID: 1689892608009186, guid: 7535a4d7851503d4699fbfb4d4e91b46, type: 3}
     - {fileID: 1290125285081394, guid: 6628c7de24531d04280a7cbfbe7c9243, type: 3}
     - {fileID: 1553163231892768, guid: 5b60509efdeb5c8499c08e12fcb5f915, type: 3}
-    maxCount: 10
+    maxCount: 15
     respawnThreshold: 5
     minSpacing: 20
     spawnChance: 0.5
