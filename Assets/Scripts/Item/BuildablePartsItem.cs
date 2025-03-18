@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem.HID;
 
@@ -12,9 +13,12 @@ public class BuildablePartsItem : Equip
     Transform hitChild;
     MeshRenderer hitMesh;
 
+    string name;
+
     public override void Start()
     {
         base.Start();
+        name = gameObject.name.Substring(6, gameObject.name.Length - 6 - 7);
     }
 
     private void Update()
@@ -25,9 +29,6 @@ public class BuildablePartsItem : Equip
     public override void OnHitFunc(RaycastHit hit)
     {
         hitObject = hit.collider.gameObject;
-        string name = gameObject.name.Substring(6, gameObject.name.Length - 6 - 7);
-        Debug.Log(name);
-        Debug.Log(gameObject.name);
         hitChild = hitObject.transform.Find(name);
 
         hitMesh = hitChild.GetComponent<MeshRenderer>();
@@ -61,8 +62,33 @@ public class BuildablePartsItem : Equip
         mats[0] = changeMaterial;
         hitMesh.materials = mats;
         CharacterManager.Instance.Player.controller.clickAction = null;
-        Debug.Log(UIManager.Instance.Inventory.GetItemSlotIndex(data));
-        UIManager.Instance.Inventory.RemoveItem(UIManager.Instance.Inventory.GetItemSlotIndex(data),1);
-        //CharacterManager.Instance.Player.equip.UnEquip();
+        CheckCompleteBuild();
+        UIManager.Instance.Inventory.RemoveItem(UIManager.Instance.Inventory.GetItemSlotIndex(data), 1);
+    }
+
+    void CheckCompleteBuild()
+    {
+        foreach (Transform child in hitObject.transform)
+        {
+            MeshRenderer childMesh = child.transform.GetComponent<MeshRenderer>();
+            Material[] childMats = childMesh.materials;
+            if (childMats[0].name.Substring(0, childMats[0].name.Length - 11) == originalMaterial.name)
+            {
+                return;
+            }
+        }
+        CompleteBuild();
+    }
+
+    void CompleteBuild()
+    {
+        foreach (Transform child in hitObject.transform)
+        {
+            if (child.name.Contains("Roof") || child.name.Contains("Front"))
+            {
+                continue;
+            }
+            child.GetComponent<MeshCollider>().enabled = true;
+        }
     }
 }
