@@ -61,6 +61,7 @@ public class BuildablePartsItem : Equip
         Material[] mats = hitMesh.materials;
         mats[0] = changeMaterial;
         hitMesh.materials = mats;
+        hitObject.transform.GetComponent<BuildHouse>().parts.Enqueue(data);
         CharacterManager.Instance.Player.controller.clickAction = null;
         CheckCompleteBuild();
         UIManager.Instance.Inventory.RemoveItem(UIManager.Instance.Inventory.GetItemSlotIndex(data), 1);
