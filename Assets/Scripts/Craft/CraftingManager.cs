@@ -165,19 +165,18 @@ public class CraftingManager : MonoBehaviour
 
     void SetIngredientItem(CraftingRecipe recipe)
     {
-        int idx = 0;
-
-        foreach (Ingredient ingredient in recipe.Ingredients)
+        for (int i = 0; i < recipe.Ingredients.Count; i++)
         {
-            if (ingredientPool.Count < 0)
+            Ingredient ingredient = recipe.Ingredients[i];
+
+            if (i < ingredientPool.Count)
             {
-                GameObject Go = ingredientPool[idx];
+                GameObject Go = ingredientPool[i];
                 Go.GetComponent<IngredientItem>().icon.sprite = ingredient.item.icon;
                 Go.GetComponent<IngredientItem>().itemName.text = ingredient.item.itemName.ToString();
                 Go.GetComponent<IngredientItem>().itemCount.text = ingredient.quantity.ToString();
 
                 Go.SetActive(true);
-                idx++;
             }
             else
             {
