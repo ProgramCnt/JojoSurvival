@@ -91,6 +91,6 @@ public class BuildablePartsItem : Equip
             }
             child.GetComponent<MeshCollider>().enabled = true;
         }
-        hitObject.layer = 0;
+        hitObject.layer = 12;
     }
 }

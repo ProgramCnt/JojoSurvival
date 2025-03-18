@@ -19,11 +19,21 @@ public class BuildHouse : Item
 
     void ReturnPart()
     {
-        foreach(ItemData part in parts)
+        foreach (ItemData part in parts)
         {
             Instantiate(part.dropPrefab, CharacterManager.Instance.Player.transform.position + CharacterManager.Instance.Player.controller.cameraContainer.
                 transform.forward * 1.2f + CharacterManager.Instance.Player.controller.cameraContainer.transform.up * 3f, Quaternion.identity);
         }
         parts.Clear();
+    }
+
+    public void BreakParts()
+    {
+        foreach (ItemData part in parts)
+        {
+            Instantiate(part.dropPrefab, transform.position + transform.up * 1.5f, Quaternion.identity);
+        }
+        parts.Clear();
+        Destroy(gameObject);
     }
 }
