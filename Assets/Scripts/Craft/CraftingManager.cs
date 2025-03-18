@@ -54,7 +54,7 @@ public class CraftingManager : MonoBehaviour
     {
         foreach (CraftingRecipe recipe in recipes) 
         {
-            CraftItem craftItem = Instantiate(craftItemPrefab, parentCraftItem).GetComponent<CraftItem>();
+            UICraftItem craftItem = Instantiate(craftItemPrefab, parentCraftItem).GetComponent<UICraftItem>();
             craftItem.Init(recipe, this);
         }
     }
@@ -64,7 +64,7 @@ public class CraftingManager : MonoBehaviour
         if (!seletedRecipe)
             return false;
 
-        // ·¹½ÃÇÇ Àç·á°¡ ÀÖ´ÂÁö ÀÎº¥Åä¸®¿¡¼­ °Ë»ç
+        // ë ˆì‹œí”¼ ì¬ë£Œê°€ ìˆëŠ”ì§€ ì¸ë²¤í† ë¦¬ì—ì„œ ê²€ì‚¬
         foreach (Ingredient ingredient in seletedRecipe.Ingredients)
         {
             int curQuantity = inventory.GetItemQuantity(ingredient.item);
@@ -73,10 +73,10 @@ public class CraftingManager : MonoBehaviour
                 return false;
         }
 
-        // ·¹½ÃÇÇ Àç·á°¡ ÀÖ´Ù¸é
+        // ë ˆì‹œí”¼ ì¬ë£Œê°€ ìˆë‹¤ë©´
         foreach (Ingredient ingredient in seletedRecipe.Ingredients)
         {
-            // ÀÎº¥Åä¸®¿¡¼­ Àç·á ¼ö ¸¸Å­ ¾ÆÀÌÅÛ »èÁ¦
+            // ì¸ë²¤í† ë¦¬ì—ì„œ ì¬ë£Œ ìˆ˜ ë§Œí¼ ì•„ì´í…œ ì‚­ì œ
             int removeQuantity = ingredient.quantity;
 
             while (removeQuantity > 0)
@@ -102,7 +102,7 @@ public class CraftingManager : MonoBehaviour
             }
         }
 
-        // ·¹½ÃÇÇ °á°ú¾ÆÀÌÅÛ ÀÎº¥Åä¸®¿¡ Ãß°¡
+        // ë ˆì‹œí”¼ ê²°ê³¼ì•„ì´í…œ ì¸ë²¤í† ë¦¬ì— ì¶”ê°€
         inventory.AddItem(seletedRecipe.resultItem);
 
         return true;
@@ -112,14 +112,14 @@ public class CraftingManager : MonoBehaviour
     {
         seletedRecipe = recipe;
 
-        // ¾ÆÀÌÅÛ ¼³¸í
+        // ì•„ì´í…œ ì„¤ëª…
         craftItemIcon.sprite = recipe.resultItem.icon;
         craftItemIcon.gameObject.SetActive(true);
         craftItemName.text = recipe.resultItem.itemName;
         craftItemDesc.text = recipe.resultItem.description;
         craftItemSpec.text = GetItemSpec(recipe.resultItem);
 
-        // Á¶ÇÕ Àç·á Ç¥½Ã
+        // ì¡°í•© ì¬ë£Œ í‘œì‹œ
         SetIngredientItem(recipe);
     }
 
@@ -127,11 +127,11 @@ public class CraftingManager : MonoBehaviour
     {
         if (TryCraft())
         {
-            Debug.Log("¾ÆÀÌÅÛ Á¶ÇÕ ¼º°ø");
+            Debug.Log("ì•„ì´í…œ ì¡°í•© ì„±ê³µ");
         }
         else
         {
-            Debug.Log("¾ÆÀÌÅÛ Á¶ÇÕ ½ÇÆĞ");
+            Debug.Log("ì•„ì´í…œ ì¡°í•© ì‹¤íŒ¨");
         }
     }
 
@@ -143,10 +143,10 @@ public class CraftingManager : MonoBehaviour
         {
             case ItemType.Equipment:
                 {
-                    sbDesc.AppendLine($"°ø°İ·Â: {data.equipmentData.damage}");
-                    sbDesc.AppendLine($"°ø°İ µô·¹ÀÌ: {data.equipmentData.attackRate}");
-                    sbDesc.AppendLine($"»ç°Å¸®: {data.equipmentData.attackDistance}");
-                    sbDesc.AppendLine($"½ºÅ×¹Ì³ª: {data.equipmentData.useStamina}");
+                    sbDesc.AppendLine($"ê³µê²©ë ¥: {data.equipmentData.damage}");
+                    sbDesc.AppendLine($"ê³µê²© ë”œë ˆì´: {data.equipmentData.attackRate}");
+                    sbDesc.AppendLine($"ì‚¬ê±°ë¦¬: {data.equipmentData.attackDistance}");
+                    sbDesc.AppendLine($"ìŠ¤í…Œë¯¸ë‚˜: {data.equipmentData.useStamina}");
                     break;
                 }
 

@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CraftItem : MonoBehaviour
+public class UICraftItem : MonoBehaviour
 {
     public Image icon;
     public TextMeshProUGUI itemName;
