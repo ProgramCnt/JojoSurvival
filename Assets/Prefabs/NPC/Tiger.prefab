@@ -1186,7 +1186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _detectRange: 5
   _fieldOfView: 120
-  _attackRange: 3
+  _attackRange: 3.5
 --- !u!114 &5124241684716698500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1203,8 +1203,7 @@ MonoBehaviour:
   _layerMask:
     serializedVersion: 2
     m_Bits: 64
-  _attackRange: 3
-  _attackValue: 2
+  _attackValue: 20
   _npcMaxHP: 10
 --- !u!1 &7084413679305231163
 GameObject:

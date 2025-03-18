@@ -73,7 +73,8 @@ public class NPCCombat : MonoBehaviour, IDamageable
 
     public void Attack()
     {
-        if(Physics.Raycast(transform.position, Vector3.forward, _attackRange, _layerMask))
+        transform.LookAt(_playerCondition.transform.position);
+        if(Physics.Raycast(transform.position, transform.forward, _attackRange + 2f, _layerMask))
         {
             _playerCondition.TakePhysicalDamage(_attackValue);
         }
