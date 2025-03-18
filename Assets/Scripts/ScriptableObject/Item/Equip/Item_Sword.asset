@@ -27,4 +27,7 @@ MonoBehaviour:
     damage: 40
     equipType: 2
     canCraft: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 8192
   consumableData: []
