@@ -1,47 +1,35 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.HID;
 
-public class Equip : MonoBehaviour
-{
-    bool attacking;
-    public ItemData itemData;
+public class Equip : Item
+{   
+    public Camera mainCamera;
+    public Action<RaycastHit> OnHitAction;
+    public Action OffHitAction;
 
-    Animator anim;
-    Camera mainCamera;
-
-    void Start()
-    {
-        anim = GetComponent<Animator>();
+    public virtual void Start()
+    {        
         mainCamera = Camera.main;
+        OnHitAction += OnHitFunc;
+        OffHitAction += OffHitFunc;
     }
 
-    void Update()
+    public virtual void OnUseItem()
     {
-        // 테스트 코드
-        if (Input.GetMouseButtonDown(0))
-        {
-            OnAttackInput();
-        }
+
     }
 
-    public void OnAttackInput()
+    public virtual void OnHitFunc(RaycastHit ray)
     {
-        if (!attacking)
-        {
-            // 플레이어 스테미너 사용 조건문
-            //if ()
-            {
-                attacking = true;
-                anim.SetTrigger("Attack");
-                Invoke("OnCanAttack", itemData.equipmentData.attackRate);
-            }
-        }
+
     }
 
-    void OnCanAttack()
+    public virtual void OffHitFunc()
     {
-        attacking = false;
+      
     }
 
     public void OnHit()
@@ -49,51 +37,13 @@ public class Equip : MonoBehaviour
         Ray ray = mainCamera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, itemData.equipmentData.attackDistance))
+        if (Physics.Raycast(ray, out hit, data.equipmentData.attackDistance, data.equipmentData.layerMask))
         {
-
-            // 맞은 대상이 자원이고 자원을 캐는 도구일때
-            if (hit.collider.TryGetComponent<Entity>(out Entity entity))
-            {
-                if (itemData.equipmentData != null)
-                {
-                    if (itemData.equipmentData.canCraft && itemData.equipmentData.equipType == EquipType.Axe)
-                    {
-                        if (entity.entityType == EntityType.Tree)
-                        {
-                            entity.OnTakeDamage(itemData.equipmentData.damage);
-                        }
-                        else
-                        {
-                            entity.OnTakeDamage(0);
-                        }
-                    }
-                    else if (itemData.equipmentData.canCraft && itemData.equipmentData.equipType == EquipType.Pickaxe)
-                    {
-                        if (entity.entityType == EntityType.Rock)
-                        {
-                            entity.OnTakeDamage(itemData.equipmentData.damage);
-                        }
-                        else
-                        {
-                            entity.OnTakeDamage(0);
-                        }
-                    }
-                    else
-                    {
-                        entity.OnTakeDamage(0);
-                    }
-                }
-            }
-            //if (itemData.equipmentData.canCraft && hit.collider.TryGetComponent<IEntity>(out entity))
-            //{
-            //    entity.OnTakeDamage(itemData.equipmentData.damage);
-            //}
-            //// 맞은 대상이 NPC일경우
-            //else if (hit.collider.TryGetComponent<IEntity>(out entity))
-            //{
-
-            //}
+            OnHitAction?.Invoke(hit);          
+        }
+        else
+        {
+            OffHitAction?.Invoke();
         }
     }
 }

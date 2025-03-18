@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,8 +14,7 @@ public class Equipment : MonoBehaviour
     private void Start()
     {
         condition = GetComponent<PlayerCondition>();
-        controller = GetComponent<PlayerController>();
-        controller.clickAction += OnAttackInput;
+        controller = GetComponent<PlayerController>();       
     }
 
     public void Equip(ItemData item)
@@ -22,6 +22,7 @@ public class Equipment : MonoBehaviour
         // 장착 중인 아이템이 있다면 장착해제
         UnEquip();
         curEquip = Instantiate(item.equipmentData.equipPrefab, equipParent).GetComponent<Equip>();
+        controller.clickAction += curEquip.OnUseItem;
     }
 
     public void UnEquip()
@@ -29,13 +30,8 @@ public class Equipment : MonoBehaviour
         if (curEquip)
         {
             Destroy(curEquip.gameObject);
+            controller.clickAction = null;
             curEquip = null;
         }
-    }
-
-    void OnAttackInput()
-    {
-        if (curEquip)
-            curEquip.OnAttackInput();
     }
 }

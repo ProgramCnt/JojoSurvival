@@ -3,13 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem.HID;
 
-public class BuildablePartsItem : Item
+public class BuildablePartsItem : Equip
 {
-    private Camera camera;
-    [SerializeField] private LayerMask layerMask;
-    private float buildDistance = 10f;
-    private bool canInstall = false;
-    public bool isInstalled = false;
     [SerializeField] Material originalMaterial;
     [SerializeField] Material changeMaterial;
 
@@ -17,60 +12,55 @@ public class BuildablePartsItem : Item
     Transform hitChild;
     MeshRenderer hitMesh;
 
-    // Start is called before the first frame update
-    void Start()
+    public override void Start()
     {
-        camera = Camera.main;
+        base.Start();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (!isInstalled)
-        {
-            OnHit();
-        }
+        OnHit();
     }
-    private void OnHit()
+
+    public override void OnHitFunc(RaycastHit hit)
     {
-        Ray ray = camera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
-        RaycastHit hit;
+        hitObject = hit.collider.gameObject;
+        string name = gameObject.name.Substring(6, gameObject.name.Length - 6 - 7);
+        Debug.Log(name);
+        Debug.Log(gameObject.name);
+        hitChild = hitObject.transform.Find(name);
 
-        if (Physics.Raycast(ray, out hit, buildDistance, layerMask))
+        hitMesh = hitChild.GetComponent<MeshRenderer>();
+        Material[] mats = hitMesh.materials;
+        mats[0] = changeMaterial;
+        hitMesh.materials = mats;
+
+        transform.GetComponent<MeshRenderer>().enabled = false;
+        CharacterManager.Instance.Player.controller.clickAction = OnUseItem;
+    }
+
+
+    public override void OffHitFunc()
+    {
+        if (hitMesh != null)
         {
-            hitObject = hit.collider.gameObject;
-            hitChild = hitObject.transform.Find(gameObject.name);
-
-            hitMesh = hitChild.GetComponent<MeshRenderer>();
             Material[] mats = hitMesh.materials;
-            mats[0] = changeMaterial;
+            mats[0] = originalMaterial;
             hitMesh.materials = mats;
-
-            transform.GetComponent<MeshRenderer>().enabled = false;
-            CharacterManager.Instance.Player.controller.clickAction = SetParts;
         }
-        else
-        {
-            if (hitMesh != null)
-            {
-                Material[] mats = hitMesh.materials;
-                mats[0] = originalMaterial;
-                hitMesh.materials = mats;
-            }
-            transform.GetComponent<MeshRenderer>().enabled = true;
-            transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
-            transform.localPosition = new Vector3(0.8f, 1, 1);
-            transform.localRotation = Quaternion.Euler(0, 0, 0);
-            CharacterManager.Instance.Player.controller.clickAction = null;
-        }
+        transform.GetComponent<MeshRenderer>().enabled = true;
+        transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+        transform.localPosition = new Vector3(0.5f, 0.5f, 0.5f);
+        transform.localRotation = Quaternion.Euler(0, 0, 0);
+        CharacterManager.Instance.Player.controller.clickAction = null;
     }
 
-    private void SetParts()
+    public override void OnUseItem()
     {
         Material[] mats = hitMesh.materials;
         mats[0] = changeMaterial;
         hitMesh.materials = mats;
         CharacterManager.Instance.Player.controller.clickAction = null;
-        Destroy(gameObject);
+        CharacterManager.Instance.Player.equip.UnEquip();
     }
 }

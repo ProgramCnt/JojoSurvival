@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 23952086938741286}
   - component: {fileID: 8260930518545787868}
   - component: {fileID: -3343569868998634389}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rpgpp_lt_rock_01
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -119,6 +119,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dca058eca629d3c4b87d0425edb43937, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curHealth: 0
-  maxHealth: 100
+  capacity: 10
+  entityType: 0
   dropItem: {fileID: 11400000, guid: 822429d5019e9524b8ea609071e91a44, type: 2}

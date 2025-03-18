@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7505069592394470020}
   - component: {fileID: 2862899550020346022}
   - component: {fileID: 2308961870264984609}
-  - component: {fileID: 1345418177856660439}
+  - component: {fileID: -35722903677839071}
   m_Layer: 7
   m_Name: Equip_Axe
   m_TagString: Untagged
@@ -106,7 +106,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1345418177856660439
+--- !u!114 &-35722903677839071
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1456556535604853269}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cf2449f41feb03439dad66f18ad8676, type: 3}
+  m_Script: {fileID: 11500000, guid: 048f5d5502565974cb26848c5e7b5eee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemData: {fileID: 11400000, guid: f0b7e400718961043a602352e7cc0c69, type: 2}
+  data: {fileID: 11400000, guid: f0b7e400718961043a602352e7cc0c69, type: 2}
