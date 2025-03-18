@@ -61,6 +61,8 @@ public class BuildablePartsItem : Equip
         mats[0] = changeMaterial;
         hitMesh.materials = mats;
         CharacterManager.Instance.Player.controller.clickAction = null;
-        CharacterManager.Instance.Player.equip.UnEquip();
+        Debug.Log(UIManager.Instance.Inventory.GetItemSlotIndex(data));
+        UIManager.Instance.Inventory.RemoveItem(UIManager.Instance.Inventory.GetItemSlotIndex(data),1);
+        //CharacterManager.Instance.Player.equip.UnEquip();
     }
 }
