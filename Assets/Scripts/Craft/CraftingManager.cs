@@ -35,6 +35,8 @@ public class CraftingManager : MonoBehaviour
 
     private void OnDisable()
     {
+        seletedRecipe = null;
+
         if (craftItemIcon.sprite)
             craftItemIcon.sprite = null;
         craftItemIcon.gameObject.SetActive(false);
@@ -108,6 +110,8 @@ public class CraftingManager : MonoBehaviour
 
     public void SelectRecipe(CraftingRecipe recipe)
     {
+        seletedRecipe = recipe;
+
         // 아이템 설명
         craftItemIcon.sprite = recipe.resultItem.icon;
         craftItemIcon.gameObject.SetActive(true);
@@ -119,7 +123,7 @@ public class CraftingManager : MonoBehaviour
         SetIngredientItem(recipe);
     }
 
-    void OnCraftButtonClick()
+    public void OnCraftButtonClick()
     {
         if (TryCraft())
         {
