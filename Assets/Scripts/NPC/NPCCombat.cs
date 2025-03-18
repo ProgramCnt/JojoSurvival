@@ -5,7 +5,7 @@ public class NPCCombat : MonoBehaviour, IDamageable
 {
     [SerializeField] private ItemData[] _dropOnDeath;
     [SerializeField] private LayerMask _layerMask;
-    [SerializeField] private float _attackRange;
+    private float _attackRange;
     [SerializeField] private int _attackValue;
     [SerializeField] private int _npcMaxHP;
     private int _curHP;
@@ -17,6 +17,7 @@ public class NPCCombat : MonoBehaviour, IDamageable
     private void Start()
     {
         _controller = GetComponent<NPCStateController>();
+        _attackRange = _controller.AttackRate;
         _curHP = _npcMaxHP;
         if (CharacterManager.Instance.Player != null)
         {
