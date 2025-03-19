@@ -73,6 +73,7 @@ public class Inventory : MonoBehaviour
             ItemData tempItem = selectedItem;
             int tempQuantity = slots[selectedIdx].quantity;
             bool tempEquipped = slots[selectedIdx].equipped;
+            bool changeEqiupIdx = slots[selectedIdx].equipped;
 
             // 전에 선택된 아이템 슬롯
             slots[selectedIdx].item = slots[idx].item;
@@ -83,9 +84,11 @@ public class Inventory : MonoBehaviour
             slots[idx].item = tempItem;
             slots[idx].quantity = tempQuantity;
             slots[idx].equipped = tempEquipped;
+            changeEqiupIdx |= slots[idx].equipped;
 
             // 아이템 장착 인덱스 변경
-            curEquipIdx = slots[selectedIdx].equipped ? slots[selectedIdx].idx : slots[idx].idx;
+            if (changeEqiupIdx)
+                curEquipIdx = slots[selectedIdx].equipped ? slots[selectedIdx].idx : slots[idx].idx;
 
             // UI 업데이트
             if (slots[idx].item)
