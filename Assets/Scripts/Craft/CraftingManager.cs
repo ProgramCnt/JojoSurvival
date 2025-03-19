@@ -119,6 +119,11 @@ public class CraftingManager : MonoBehaviour
         craftItemDesc.text = recipe.resultItem.description;
         craftItemSpec.text = GetItemSpec(recipe.resultItem);
 
+        foreach (GameObject Go in ingredientPool)
+        {
+            Go.SetActive(false);
+        }
+
         // 조합 재료 표시
         SetIngredientItem(recipe);
     }
