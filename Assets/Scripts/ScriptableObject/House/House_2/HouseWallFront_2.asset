@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd36247081ec694b91946f2924dd07a, type: 3}
+  m_Name: HouseWallFront_2
+  m_EditorClassIdentifier: 
+  itemName: "\uC9D1\uC758 \uC55E\uBA74"
+  description: "\uC9D1\uC758 \uC55E\uBA74\uC774\uB2E4"
+  icon: {fileID: 21300000, guid: 5855f0a6e497f3a4bafe90ed1f3d9607, type: 3}
+  dropPrefab: {fileID: 5739953979626132176, guid: d1aceb2533373d542a59a2d0bed3e987, type: 3}
+  type: 0
+  canStack: 0
+  maxStackAmount: 0
+  equipmentData:
+    equipPrefab: {fileID: 5739953979626132176, guid: 57b5e3b1ca786d040a169a4bb0f45b8c, type: 3}
+    attackRate: 0
+    attackDistance: 5
+    useStamina: 0
+    damage: 0
+    equipType: 3
+    canCraft: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 512
+  consumableData: []

@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd36247081ec694b91946f2924dd07a, type: 3}
+  m_Name: HouseFloor_1
+  m_EditorClassIdentifier: 
+  itemName: "\uC9D1\uC758 \uBC14\uB2E5"
+  description: "\uC9D1\uC758 \uBC14\uB2E5\uC774\uB2E4"
+  icon: {fileID: 21300000, guid: 1f1b8ecc6b0feba4f8ace426e2ca5cc2, type: 3}
+  dropPrefab: {fileID: 522696358315740366, guid: 61d7afe7a7968ec4f85dc7e730f339ba, type: 3}
+  type: 0
+  canStack: 0
+  maxStackAmount: 0
+  equipmentData:
+    equipPrefab: {fileID: 522696358315740366, guid: f998d1853e6835b488c1db4a05444684, type: 3}
+    attackRate: 0
+    attackDistance: 5
+    useStamina: 0
+    damage: 0
+    equipType: 3
+    canCraft: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 512
+  consumableData: []

@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd36247081ec694b91946f2924dd07a, type: 3}
+  m_Name: Item_Hammer
+  m_EditorClassIdentifier: 
+  itemName: "\uB9DD\uCE58"
+  description: "\uC9D1\uC744 \uBD80\uC220 \uC218 \uC788\uB2E4."
+  icon: {fileID: 21300000, guid: 0aac53b0cf62e6f4b9207fae9e26baa1, type: 3}
+  dropPrefab: {fileID: 4996708924410944206, guid: 649cbc49bb3cf564ca1cded0414175f1, type: 3}
+  type: 0
+  canStack: 0
+  maxStackAmount: 0
+  equipmentData:
+    equipPrefab: {fileID: 4996708924410944206, guid: 4e92d83d4f22bc04e8eb12f82ff94853, type: 3}
+    attackRate: 1
+    attackDistance: 5
+    useStamina: 5
+    damage: 20
+    equipType: 0
+    canCraft: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 4096
+  consumableData: []
