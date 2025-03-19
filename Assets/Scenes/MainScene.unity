@@ -175,6 +175,7 @@ MonoBehaviour:
   recipes:
   - {fileID: 11400000, guid: 12e09db996b1b334aaca7e1d6a45f828, type: 2}
   - {fileID: 11400000, guid: 24ca3eff9c0b2ed4bab6c8328a7faf9f, type: 2}
+  - {fileID: 11400000, guid: 20a90c05f27a14f45bd18cd10f115740, type: 2}
   - {fileID: 11400000, guid: 5ca98e0b39bca8c46b3224b00fc44ef9, type: 2}
   - {fileID: 11400000, guid: 84785ddc21096ef42998cbd2482ff33f, type: 2}
   - {fileID: 11400000, guid: 03d5b2f6ca1b41d46a12bc8d893048ae, type: 2}
@@ -7840,14 +7841,14 @@ PrefabInstance:
     - target: {fileID: 7659613498574877260, guid: 62eb135f3e77ce448a3faca68b335a6a, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: 9ee462218bc3dd8438a91d3012828447, type: 2}
     - target: {fileID: 7659613498574877260, guid: 62eb135f3e77ce448a3faca68b335a6a, type: 3}
       propertyPath: tooltip
       value: 
       objectReference: {fileID: 1174548249}
     - target: {fileID: 7659613498574877260, guid: 62eb135f3e77ce448a3faca68b335a6a, type: 3}
       propertyPath: quantity
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9070139239446587672, guid: 62eb135f3e77ce448a3faca68b335a6a, type: 3}
       propertyPath: m_Pivot.x
@@ -9298,14 +9299,14 @@ PrefabInstance:
     - target: {fileID: 7659613498574877260, guid: 62eb135f3e77ce448a3faca68b335a6a, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: 822429d5019e9524b8ea609071e91a44, type: 2}
     - target: {fileID: 7659613498574877260, guid: 62eb135f3e77ce448a3faca68b335a6a, type: 3}
       propertyPath: tooltip
       value: 
       objectReference: {fileID: 1174548249}
     - target: {fileID: 7659613498574877260, guid: 62eb135f3e77ce448a3faca68b335a6a, type: 3}
       propertyPath: quantity
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9070139239446587672, guid: 62eb135f3e77ce448a3faca68b335a6a, type: 3}
       propertyPath: m_Pivot.x
