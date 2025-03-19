@@ -32,6 +32,7 @@ public class NPCCombat : MonoBehaviour, IDamageable
         if(_curHP <= 0)
         {
             Die();
+            return;
         }
 
         StartCoroutine(DamageFlash());
