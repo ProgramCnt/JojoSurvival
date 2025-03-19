@@ -160,7 +160,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnSprint(InputAction.CallbackContext context)
     {
-        if (context.phase == InputActionPhase.Performed && !IsGrounded())
+        if (context.phase == InputActionPhase.Performed && IsGrounded())
         {
             _isSprint = true;
 
