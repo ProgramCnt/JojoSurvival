@@ -652,7 +652,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54730e739387278479664aa005e350c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dropOnDeath: []
+  _dropOnDeath:
+  - {fileID: 11400000, guid: 9956eadf557f6b445bac0e2325500e29, type: 2}
+  - {fileID: 11400000, guid: 9956eadf557f6b445bac0e2325500e29, type: 2}
+  - {fileID: 11400000, guid: 9ee462218bc3dd8438a91d3012828447, type: 2}
+  - {fileID: 11400000, guid: 822429d5019e9524b8ea609071e91a44, type: 2}
   _layerMask:
     serializedVersion: 2
     m_Bits: 64
